@@ -2,7 +2,7 @@
    LLA Marketing Command Center — renderer
    ============================================================ */
 (function(){
-  var D = LLA_CEO, P = "daily";  // daily | june | july
+  var D = LLA_CEO, P = "daily";  // daily | june
   var crm = D.meta.crm_base;
   var $ = function(s,el){return (el||document).querySelector(s);};
 
@@ -125,13 +125,12 @@
 
   function pricingBlock(){
     var pt = D.pricing_target;
-    return '<div class="card"><h3>80 / 20 Pricing Directive</h3>'+
-      '<div class="csub">CEO target for how the lead-form pool ('+money(pt.pool)+'/day) presents price</div>'+
-      '<div class="pricing-vis">'+
-        '<div class="pblock m"><div class="pct">'+pt.monthly.pct+'%</div><div class="pl">Clear $289 / month</div>'+
-          '<div class="pd">'+money(pt.monthly.budget)+'/day · ~'+pt.monthly.leads+' leads/day · Form 2<br>IDs #108775 · #108776</div></div>'+
-        '<div class="pblock s"><div class="pct">'+pt.per_session.pct+'%</div><div class="pl">$83 / session</div>'+
-          '<div class="pd">'+money(pt.per_session.budget)+'/day · ~'+pt.per_session.leads+' leads/day · Form 1<br>IDs #108718 · #108719</div></div>'+
+    return '<div class="card"><h3>Pricing Presentation</h3>'+
+      '<div class="csub">What every lead-form audience sees — one clear price across the board</div>'+
+      '<div class="price-hero">'+
+        '<div class="ph-pct">100%</div>'+
+        '<div class="ph-tx"><div class="ph-price">$289 <span>/ month</span></div>'+
+          '<div class="ph-sub">All four lead-form ad sets — #108718 · #108719 · #108775 · #108776</div></div>'+
       '</div>'+
       '<div class="directive">'+pt.note+'</div>'+
     '</div>';
@@ -142,14 +141,34 @@
     el.innerHTML =
       explainer("In plain English", D.meta.explain_overview)+
       periodBar()+
+      junePlan()+
       kpiBlock()+
       targetingBlock()+
       adsetTable()+
       '<section><div class="sec-head"><h2>Quotas &amp; Pricing</h2>'+
-        '<span class="note">Daily delivery targets and the CEO 80/20 pricing presentation</span></div>'+
+        '<span class="note">Daily delivery targets and the single $289/month pricing presentation</span></div>'+
         '<div class="grid2">'+quotaBlock()+pricingBlock()+'</div></section>';
     bindPeriod();
     requestAnimationFrame(function(){ /* trigger transitions */ });
+  }
+
+  function junePlan(){
+    if(P!=="june") return "";
+    var j = D.periods.june;
+    return '<section><div class="sec-head"><h2>June Plan · Jun 23–30</h2>'+
+      '<span class="note">8-day plan on current spend — the targets the team is working toward</span></div>'+
+      '<div class="jp">'+
+        jpStat("4","reps","handling inbound leads through June 30","#10B981")+
+        jpStat("100","leads / day","daily target across all 5 ad sets","#06B6D4")+
+        jpStat(Math.round(j.leads).toLocaleString(),"leads in June","projected over the 8-day window","#A78BFA")+
+        jpStat(money(j.budget),"spend in June","at the current $1,720/day run-rate","#F59E0B")+
+      '</div></section>';
+  }
+  function jpStat(big,lbl,sub,c){
+    return '<div class="jp-card" style="--accent:'+c+'">'+
+      '<div class="jp-big">'+big+'</div>'+
+      '<div class="jp-lbl">'+lbl+'</div>'+
+      '<div class="jp-sub">'+sub+'</div></div>';
   }
 
   function explainer(title, body){
@@ -160,7 +179,7 @@
   function periodBar(){
     function b(k,t){return '<button data-p="'+k+'" class="'+(P===k?'on':'')+'">'+t+'</button>';}
     return '<div class="period-bar"><span class="lbl">View</span>'+
-      '<div class="seg">'+b("daily","Daily")+b("june","Jun 23–30")+b("july","July")+'</div></div>';
+      '<div class="seg">'+b("daily","Daily")+b("june","June Plan · Jun 23–30")+'</div></div>';
   }
   function bindPeriod(){
     document.querySelectorAll('.seg button').forEach(function(btn){
