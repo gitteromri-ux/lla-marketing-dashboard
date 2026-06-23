@@ -140,6 +140,7 @@
   function renderOverview(){
     var el = document.getElementById("overview");
     el.innerHTML =
+      explainer("In plain English", D.meta.explain_overview)+
       periodBar()+
       kpiBlock()+
       targetingBlock()+
@@ -149,6 +150,11 @@
         '<div class="grid2">'+quotaBlock()+pricingBlock()+'</div></section>';
     bindPeriod();
     requestAnimationFrame(function(){ /* trigger transitions */ });
+  }
+
+  function explainer(title, body){
+    return '<div class="explain"><div class="ex-ic">i</div><div class="ex-tx">'+
+      '<div class="ex-h">'+title+'</div><p>'+body+'</p></div></div>';
   }
 
   function periodBar(){
@@ -180,6 +186,7 @@
         '</div></div>';
     }).join("");
     el.innerHTML =
+      explainer("In plain English", D.meta.explain_measures)+
       '<section><div class="sec-head"><h2>All Measures Taken</h2>'+
         '<span class="note">Optimization actions applied to the Meta campaign · '+D.meta.updated+'</span></div>'+
         '<div class="measures">'+cards+'</div></section>';
