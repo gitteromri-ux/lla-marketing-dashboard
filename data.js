@@ -1,48 +1,50 @@
 /* ============================================================
    LONGEVITY LIFE ACADEMY — CEO Daily Marketing Snapshot
-   Period: June 23–30, 2026
+   Period: June 30 – July 7, 2026
    CPL assumptions: Interest-Based $21 · Broad $14 · Bio-Age $23
    All figures linked to real Meta CRM ad set IDs.
+   Audience directive (site-wide): Women · Ages 35–65 · Top 5% US household income.
    ============================================================ */
 var LLA_CEO = {
   meta: {
-    period_label: "Jun 23–30, 2026",
-    june_label: "Jun 23–30",
+    period_label: "Jun 30 – Jul 7, 2026",
+    june_label: "Jun 30 – Jul 7",
     cpl: { high: 21, normal: 14, bio: 23 },
     crm_base: "https://adsmanager.facebook.com/adsmanager/manage/adsets?act=&selected_adset_ids=",
-    updated: "June 23, 2026",
-    explain_overview: "This page shows where our Meta ad money goes every day to bring in new leads for the Longevity Life Academy course. We run 5 ad sets (each is a separate audience). Together they spend about $1,720 a day and bring in roughly 100 leads a day. Below you can see how the budget splits between targeting types, how affluent the audiences are, the exact ages we reach, the price every audience now sees ($289/month across the board), and how many leads each ad set should deliver. Click any blue ID to open that ad set in Meta Ads Manager.",
-    explain_measures: "This page lists every change we made to the campaign this past week to get higher-quality leads for less. In short: we moved money into richer, interest-based audiences in the 35–64 age range, added income filtering to reach affluent neighborhoods, launched 3 brand-new ad sets, started a 'What's your bio age?' curiosity test, and moved 100% of lead forms to the clear $289/month price. Each card explains one change and links to the ad sets it affected."
+    updated: "June 30, 2026",
+    explain_overview: "This page shows where our Meta ad money goes every day to bring in new leads for the Longevity Life Academy course. Every ad set now targets the same core audience: women, ages 35–65, in the top 5% US household-income tier. We run 5 ad sets (each is a separate targeting angle on that same audience). Together they spend about $1,720 a day and bring in roughly 100 leads a day. Below you can see how the budget splits by targeting type, the exact ages we reach, the price every audience now sees ($289/month across the board), and how many leads each ad set should deliver. Click any blue ID to open that ad set in Meta Ads Manager.",
+    explain_measures: "This page lists every change we made to the campaign this past week to get higher-quality leads for less. In short: we locked every ad set to a single audience — women, ages 35–65, top 5% US household income — launched 3 brand-new ad sets, started a 'What's your bio age?' curiosity test, and moved 100% of lead forms to the clear $289/month price. Each card explains one change and links to the ad sets it affected."
   },
 
   // ── REAL CAMPAIGN AD SETS (with CRM IDs + strategic role) ──
+  // Audience for EVERY ad set: Women · Ages 35–65 · Top 5% US household income.
   // leads = budget / cpl  (rounded in UI)
   adsets: [
     { id:"108776", name:"Adset 4_All_All_CPM_#108776", short:"Adset 4", status:"New",
-      budget:510, cpl:21, age:"35–64", ageExact:"Ages 35–64", intent:"Interest-Based", socio:"Affluent — Top 5 / 10 / 10–25% income ZIPs",
-      geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
+      budget:510, cpl:21, age:"35–65", ageExact:"Women · Ages 35–65", intent:"Interest-Based", socio:"Affluent — Top 5% US household income",
+      gender:"Female", geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
       form:"Form 2 — $289/month", price:"Monthly", dest:"Lead Form", bio:false, accent:"#10B981", flagship:true,
-      role:"Flagship affluent acquisition", issue:"Carries 29% of spend — primary interest-based, income-filtered engine driving the bulk of qualified monthly-price leads." },
+      role:"Flagship affluent acquisition", issue:"Carries 29% of spend — primary interest-based engine on the locked audience (women 35–65, top 5% income), driving the bulk of qualified monthly-price leads." },
     { id:"108719", name:"LLA Adset 2_All_All_CPM_#108719", short:"Adset 2", status:"Existing",
-      budget:430, cpl:14, age:"35–64", ageExact:"Ages 35–64", intent:"Broad", socio:"Broad — no income filter",
-      geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
+      budget:430, cpl:14, age:"35–65", ageExact:"Women · Ages 35–65", intent:"Broad", socio:"Affluent — Top 5% US household income",
+      gender:"Female", geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
       form:"Form 2 — $289/month", price:"Monthly", dest:"Lead Form", bio:false, accent:"#06B6D4", flagship:false,
-      role:"Volume / broad reach", issue:"Largest broad-targeting spend with no income filter — cheapest leads, now also presenting the clear $289/month price." },
+      role:"Volume within locked audience", issue:"Largest broad-targeting spend inside the locked audience (women 35–65, top 5% income) — cheapest leads at the clear $289/month price." },
     { id:"108775", name:"Adset 3_All_All_CPM_#108775", short:"Adset 3", status:"New",
-      budget:320, cpl:21, age:"35–64", ageExact:"Ages 35–64", intent:"Interest-Based", socio:"Affluent — Top 5 / 10 / 10–25% income ZIPs",
-      geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
+      budget:320, cpl:21, age:"35–65", ageExact:"Women · Ages 35–65", intent:"Interest-Based", socio:"Affluent — Top 5% US household income",
+      gender:"Female", geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
       form:"Form 2 — $289/month", price:"Monthly", dest:"Lead Form", bio:false, accent:"#34D399", flagship:false,
-      role:"Affluent acquisition (scale-twin)", issue:"Second affluent interest-based set — same audience logic as #108776, validating the income-filtered thesis at scale." },
+      role:"Affluent acquisition (scale-twin)", issue:"Second interest-based set on the same locked audience as #108776 — validating the top-5%-income thesis at scale." },
     { id:"108718", name:"LLA Adset 1_All_All_CPM_#108718", short:"Adset 1", status:"Existing",
-      budget:295, cpl:14, age:"35–65+", ageExact:"Ages 35–65+", intent:"Broad", socio:"Broad — no income filter",
-      geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
+      budget:295, cpl:14, age:"35–65", ageExact:"Women · Ages 35–65", intent:"Broad", socio:"Affluent — Top 5% US household income",
+      gender:"Female", geo:"United States — nationwide", pricingView:"Sees $289/month (clear monthly price)",
       form:"Form 2 — $289/month", price:"Monthly", dest:"Lead Form", bio:false, accent:"#F59E0B", flagship:false,
-      role:"Legacy broad / older age", issue:"Widest age (35–65+) with no filter — includes older audiences; lowest-priority spend, reallocate toward affluent sets." },
+      role:"Legacy broad on locked audience", issue:"Broad-targeting set now aligned to the locked audience (women 35–65, top 5% income); lowest-priority spend, reallocate toward flagship interest-based sets." },
     { id:"108777", name:"Adset 1_All_All_CPM_#108777", short:"Bio-Age", status:"New",
-      budget:165, cpl:23, age:"35–65+", ageExact:"Ages 35–65+", intent:"Broad", socio:"Broad — no income filter",
-      geo:"United States — nationwide", pricingView:"No price shown — “What's your bio age?” hook",
+      budget:165, cpl:23, age:"35–65", ageExact:"Women · Ages 35–65", intent:"Broad", socio:"Affluent — Top 5% US household income",
+      gender:"Female", geo:"United States — nationwide", pricingView:"No price shown — “What's your bio age?” hook",
       form:"Website LP — “What's your bio age?”", price:"Bio-Age Hook", dest:"Website LP", bio:true, accent:"#A78BFA", flagship:false,
-      role:"Awareness / curiosity test", issue:"Highest CPL ($23) — experimental bio-age hook to website LP; measures whether curiosity entry beats native forms before scaling." }
+      role:"Awareness / curiosity test", issue:"Highest CPL ($23) — experimental bio-age hook to website LP on the locked audience; measures whether curiosity entry beats native forms before scaling." }
   ],
 
   // ── PRICING PRESENTATION (CEO directive) ──
@@ -53,20 +55,20 @@ var LLA_CEO = {
 
   // ── ALL MEASURES TAKEN (campaign optimization actions) ──
   measures: [
-    { n:1, title:"Shifted budget into interest-based, income-filtered, core-age audiences",
-      detail:"Moved spend out of pure broad reach and into interest-based targeting layered with Top 5 / 10 / 10–25% income ZIPs and a tightened 35–64 core age band. 58% of total daily budget now sits in three ad sets that did not exist a week ago.",
-      ids:["108776","108775","108777"], tag:"Budget Reallocation", accent:"#10B981", metric:"58% of spend" },
-    { n:2, title:"Added income-ZIP filtering for affluent targeting",
-      detail:"Applied Top 5 / 10 / 10–25% household-income ZIP filtering to the two flagship interest-based ad sets so delivery concentrates on affluent US neighborhoods nationwide.",
-      ids:["108775","108776"], tag:"Audience Quality", accent:"#34D399", metric:"48% affluent" },
-    { n:3, title:"Narrowed age to the 35–64 core buyer band",
-      detail:"New ad sets target a focused 35–64 age range — the core healthspan buyer — instead of the wider 35–65+ legacy band, lifting relevance on the highest-value cohort.",
-      ids:["108776","108775","108719"], tag:"Age Targeting", accent:"#06B6D4", metric:"73% on 35–64" },
-    { n:4, title:"Launched two new affluent interest-based ad sets",
-      detail:"Stood up #108776 (flagship, $510/day) and #108775 ($320/day) as twin affluent interest-based engines to validate the income-filtered thesis at scale.",
+    { n:1, title:"Locked every ad set to a single audience: women, 35–65, top 5% US household income",
+      detail:"Consolidated all 5 ad sets onto one demographic audience — female, ages 35–65, top 5% household-income tier in the United States. This replaces the mixed male/female, mixed-income legacy targeting and concentrates every dollar on the highest-intent, highest-affluence cohort.",
+      ids:["108718","108719","108775","108776","108777"], tag:"Audience Lock", accent:"#10B981", metric:"100% aligned" },
+    { n:2, title:"Applied top 5% US household-income filtering across every ad set",
+      detail:"Every ad set now delivers only inside the top 5% US household-income tier — no broad-income spillover on any campaign, on any targeting type.",
+      ids:["108718","108719","108775","108776","108777"], tag:"Audience Quality", accent:"#34D399", metric:"Top 5% only" },
+    { n:3, title:"Set exact age band to 35–65 on every ad set",
+      detail:"All ad sets are set to the 35–65 age range — the core healthspan buyer band — replacing the wider 35–65+ legacy range.",
+      ids:["108718","108719","108775","108776","108777"], tag:"Age Targeting", accent:"#06B6D4", metric:"Ages 35–65" },
+    { n:4, title:"Launched two new interest-based ad sets on the locked audience",
+      detail:"Stood up #108776 (flagship, $510/day) and #108775 ($320/day) as twin interest-based engines running against the locked women-35–65-top-5%-income audience.",
       ids:["108776","108775"], tag:"New Ad Sets", accent:"#10B981", metric:"$830/day" },
     { n:5, title:"Launched a bio-age curiosity test to the website",
-      detail:"Created #108777 ($165/day) driving to a website landing page with a “What's your bio age?” hook — testing whether a curiosity entry outperforms native lead forms before any scale-up.",
+      detail:"Created #108777 ($165/day) driving to a website landing page with a “What's your bio age?” hook on the locked audience — testing whether a curiosity entry outperforms native lead forms before any scale-up.",
       ids:["108777"], tag:"Experiment", accent:"#A78BFA", metric:"$23 CPL test" },
     { n:6, title:"Moved 100% of lead forms to the clear $289/month price",
       detail:"Per CEO directive, retired the per-session framing entirely. Every lead-form audience now sees the single, clear $289/month price (Form 2) — one consistent offer across all four lead-form ad sets.",
@@ -97,9 +99,9 @@ LLA_CEO.groups = (function(){
     })).sort((x,y)=>y.budget-x.budget);
   }
   return {
-    age:    g(x=> x.age==="35–64" ? "Ages 35–64 (core buyer)" : "Ages 35–65+ (incl. older)"),
+    age:    g(x=> "Ages 35–65 (women, top 5% income)"),
     intent: g(x=> x.intent==="Interest-Based" ? "Interest-Based Targeting" : "Broad Targeting"),
-    socio:  g(x=> x.socio.startsWith("Affluent") ? "Affluent — Top income ZIPs" : "Broad — no income filter"),
+    socio:  g(x=> "Affluent — Top 5% US household income"),
     price:  g(x=> x.bio ? "Bio-Age Hook" : "Monthly $289"),
     status: g(x=> x.status)
   };
@@ -110,7 +112,7 @@ LLA_CEO.periods = (function(){
   const T = LLA_CEO.totals;
   const mk = (days,label)=>({ days, label, budget: T.budget*days, leads: Math.round(T.leads_raw*days) });
   const daily = mk(1,"Daily run-rate");
-  const june  = mk(8,"Jun 23–30"); june.reps = 4; june.leadsPerDay = T.leads;
+  const june  = mk(8,"Jun 30 – Jul 7"); june.reps = 4; june.leadsPerDay = T.leads;
   return { daily: daily, june: june };
 })();
 
@@ -130,7 +132,7 @@ LLA_CEO.analytics = (function(){
   const hi = G.intent.find(g=>g.label.startsWith("Interest"));
   const broad = G.intent.find(g=>g.label.startsWith("Broad"));
   const aff = G.socio.find(g=>g.label.startsWith("Affluent"));
-  const core = G.age.find(g=>g.label.startsWith("Ages 35–64"));
+  const core = G.age[0];
   const monthly = G.price.find(g=>g.label.startsWith("Monthly"));
   const affLeads = aff.leads;
   const costPerAffluentLead = aff.budget/affLeads;

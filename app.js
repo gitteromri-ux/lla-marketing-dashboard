@@ -25,8 +25,8 @@
     '<div class="kpis">'+
       kpi("Daily Budget", money(pd.budget), "", "Across <b>5 active ad sets</b> · "+budWord, D.adsets[0].accent)+
       kpi("Lead Volume", Math.round(pd.leads).toLocaleString(), "leads", "Blended CPL <b>"+money(A.blendedCpl)+"</b> · "+leadWord, "#06B6D4")+
-      kpi("Interest-Based", A.highIntentPct+"%", "of spend", "<b>"+money(A.highIntentBudget)+"/day</b> · income-filtered affluent", "#10B981")+
-      kpi("Affluent Reach", A.affluentPct+"%", "of spend", "Top income ZIPs · <b>"+money(A.costPerAffluentLead)+"</b> / affluent lead", "#A78BFA")+
+      kpi("Interest-Based", A.highIntentPct+"%", "of spend", "<b>"+money(A.highIntentBudget)+"/day</b> · women 35–65, top 5% income", "#10B981")+
+      kpi("Locked Audience", "100%", "of spend", "Women · 35–65 · <b>Top 5% US household income</b>", "#A78BFA")+
     '</div></section>';
   }
   function kpi(lbl,val,unit,sub,accent){
@@ -46,35 +46,42 @@
   }
 
   function targetingBlock(){
-    var G = D.groups;
-    var intent = G.intent, socio = G.socio, age = G.age;
+    var G = D.groups, T = D.totals;
+    var intent = G.intent;
     var ib = intent.find(function(g){return g.label.indexOf("Interest")===0;});
     var br = intent.find(function(g){return g.label.indexOf("Broad")===0;});
-    var aff = socio.find(function(g){return g.label.indexOf("Affluent")===0;});
-    var bra = socio.find(function(g){return g.label.indexOf("Broad")===0;});
-    var core = age.find(function(g){return g.label.indexOf("Ages 35–64")===0;});
-    var older= age.find(function(g){return g.label.indexOf("Ages 35–65")===0;});
 
     var html = '<section><div class="sec-head"><h2>Audience &amp; Targeting</h2>'+
-      '<span class="note">How the daily budget splits across targeting type, socio-economic tier &amp; exact age</span></div>'+
+      '<span class="note">One locked audience across every ad set — split only by targeting type</span></div>'+
     '<div class="grid3">';
 
+    // Locked audience card
+    html += '<div class="card"><h3>Locked Audience</h3><div class="csub">Every ad set — no exceptions</div>'+
+      '<div class="lock-list">'+
+        '<div class="lock-row"><span class="lock-lbl">Gender</span><b>Female only</b></div>'+
+        '<div class="lock-row"><span class="lock-lbl">Age</span><b>35 – 65</b></div>'+
+        '<div class="lock-row"><span class="lock-lbl">Income</span><b>Top 5% US household income</b></div>'+
+        '<div class="lock-row"><span class="lock-lbl">Geo</span><b>United States — nationwide</b></div>'+
+        '<div class="lock-row"><span class="lock-lbl">Coverage</span><b>100% of $'+Math.round(T.budget).toLocaleString()+'/day</b></div>'+
+      '</div>'+
+    '</div>';
+
     // Targeting type
-    html += '<div class="card"><h3>Targeting Type</h3><div class="csub">Interest-based vs broad reach</div>'+
-      splitBar("Broad Targeting","no income filter",br.pctBudget,"#06B6D4",br.budget,br.leads)+
-      splitBar("Interest-Based","income-filtered affluent",ib.pctBudget,"#10B981",ib.budget,ib.leads)+
+    html += '<div class="card"><h3>Targeting Type</h3><div class="csub">Interest-based vs broad reach — inside the locked audience</div>'+
+      splitBar("Broad Targeting","women 35–65, top 5% income",br.pctBudget,"#06B6D4",br.budget,br.leads)+
+      splitBar("Interest-Based","women 35–65, top 5% income",ib.pctBudget,"#10B981",ib.budget,ib.leads)+
     '</div>';
 
-    // Socio-economic
-    html += '<div class="card"><h3>Socio-Economic</h3><div class="csub">Household-income ZIP filtering</div>'+
-      splitBar("Broad","no income filter",bra.pctBudget,"#F59E0B",bra.budget,bra.leads)+
-      splitBar("Affluent","Top 5 / 10 / 10–25% income ZIPs",aff.pctBudget,"#A78BFA",aff.budget,aff.leads)+
-    '</div>';
-
-    // Age
-    html += '<div class="card"><h3>Exact Age Bands</h3><div class="csub">Core buyer vs wider legacy range</div>'+
-      splitBar("Ages 35–64","core healthspan buyer",core.pctBudget,"#10B981",core.budget,core.leads)+
-      splitBar("Ages 35–65+","incl. older audiences",older.pctBudget,"#6B7AA0",older.budget,older.leads)+
+    // Pricing view (replaces the age/socio split cards — those are now uniform)
+    var monthlySpend = D.adsets.filter(function(x){return !x.bio;}).reduce(function(s,x){return s+x.budget;},0);
+    var bioSpend = D.adsets.filter(function(x){return x.bio;}).reduce(function(s,x){return s+x.budget;},0);
+    var monthlyPct = Math.round(monthlySpend/T.budget*100);
+    var bioPct = Math.round(bioSpend/T.budget*100);
+    var monthlyLeads = D.adsets.filter(function(x){return !x.bio;}).reduce(function(s,x){return s+x.budget/x.cpl;},0);
+    var bioLeads = D.adsets.filter(function(x){return x.bio;}).reduce(function(s,x){return s+x.budget/x.cpl;},0);
+    html += '<div class="card"><h3>Offer Presentation</h3><div class="csub">What the locked audience sees</div>'+
+      splitBar("$289 / month","Form 2 — clear monthly price",monthlyPct,"#10B981",monthlySpend,monthlyLeads)+
+      splitBar("Bio-Age Hook","website curiosity test",bioPct,"#A78BFA",bioSpend,bioLeads)+
     '</div>';
 
     html += '</div></section>';
@@ -155,13 +162,13 @@
   function junePlan(){
     if(P!=="june") return "";
     var j = D.periods.june;
-    return '<section><div class="sec-head"><h2>June Plan · Jun 23–30</h2>'+
+    return '<section><div class="sec-head"><h2>Plan · Jun 30 – Jul 7</h2>'+
       '<span class="note">8-day plan on current spend — the targets the team is working toward</span></div>'+
       '<div class="jp">'+
-        jpStat("4","reps","handling inbound leads through June 30","#10B981")+
+        jpStat("4","reps","handling inbound leads through Jul 7","#10B981")+
         jpStat("100","leads / day","daily target across all 5 ad sets","#06B6D4")+
-        jpStat(Math.round(j.leads).toLocaleString(),"leads in June","projected over the 8-day window","#A78BFA")+
-        jpStat(money(j.budget),"spend in June","at the current $1,720/day run-rate","#F59E0B")+
+        jpStat(Math.round(j.leads).toLocaleString(),"leads (Jun 30 – Jul 7)","projected over the 8-day window","#A78BFA")+
+        jpStat(money(j.budget),"spend (Jun 30 – Jul 7)","at the current $1,720/day run-rate","#F59E0B")+
       '</div></section>';
   }
   function jpStat(big,lbl,sub,c){
@@ -179,7 +186,7 @@
   function periodBar(){
     function b(k,t){return '<button data-p="'+k+'" class="'+(P===k?'on':'')+'">'+t+'</button>';}
     return '<div class="period-bar"><span class="lbl">View</span>'+
-      '<div class="seg">'+b("daily","Daily")+b("june","June Plan · Jun 23–30")+'</div></div>';
+      '<div class="seg">'+b("daily","Daily")+b("june","Plan · Jun 30 – Jul 7")+'</div></div>';
   }
   function bindPeriod(){
     document.querySelectorAll('.seg button').forEach(function(btn){
