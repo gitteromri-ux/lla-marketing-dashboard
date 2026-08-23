@@ -255,3 +255,54 @@ footer b{color:var(--mut)}
   .measure .mnum{width:52px;height:52px;font-size:22px}
   .updated{margin-left:0;text-align:left}
 }
+
+/* ── AUG FINISH TAB — huge editorial type ── */
+.af-hero{margin:44px 0 10px;padding:44px 46px;border:1px solid var(--stroke2);border-radius:var(--radius);
+  background:linear-gradient(160deg,rgba(0,110,255,.14),rgba(0,110,255,.02));box-shadow:var(--shadow)}
+.af-kicker{font-size:15px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--brand2);margin-bottom:16px}
+.af-title{font-size:clamp(44px,6.4vw,84px);font-weight:900;letter-spacing:-.035em;line-height:1.02;margin-bottom:20px}
+.af-blue{background:linear-gradient(90deg,var(--brand2),#00C2FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.af-lede{font-size:clamp(19px,2vw,25px);line-height:1.55;color:var(--txt);font-weight:500;max-width:1040px}
+.af-lede b{color:#fff;font-weight:800}
+
+.af-grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.af-big{position:relative;overflow:hidden;border:1px solid var(--stroke);border-radius:var(--radius);
+  background:linear-gradient(160deg,var(--panel2),var(--panel));padding:32px 28px;box-shadow:var(--shadow)}
+.af-big::after{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent,var(--brand))}
+.af-lbl{font-size:14px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.af-num{font-size:clamp(58px,6vw,96px);font-weight:900;letter-spacing:-.04em;line-height:1;margin:14px 0 10px}
+.af-sub{font-size:15.5px;color:var(--mut);font-weight:600;line-height:1.5}
+
+.af-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px}
+.af-day{border:1px solid var(--stroke);border-radius:20px;background:linear-gradient(160deg,var(--panel2),var(--panel));
+  padding:24px 18px;text-align:center;box-shadow:var(--shadow)}
+.af-d-date{font-size:17px;font-weight:800;letter-spacing:.02em;color:var(--mut);text-transform:uppercase}
+.af-d-spend{font-size:clamp(26px,2.6vw,40px);font-weight:900;letter-spacing:-.03em;margin:12px 0 8px}
+.af-d-meta{font-size:14px;color:var(--mut);font-weight:600;line-height:1.45}
+.af-day-off{opacity:.55;border-style:dashed}
+.af-day-final{border-color:rgba(16,185,129,.5);background:linear-gradient(160deg,rgba(16,185,129,.16),rgba(16,185,129,.03))}
+.af-day-final .af-d-spend{color:var(--emerald)}
+
+.af-math{display:flex;align-items:stretch;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.af-step{flex:1 1 150px;border:1px solid var(--stroke);border-radius:20px;padding:26px 20px;text-align:center;
+  background:linear-gradient(160deg,var(--panel2),var(--panel));box-shadow:var(--shadow)}
+.af-s-val{font-size:clamp(34px,3.6vw,56px);font-weight:900;letter-spacing:-.035em;line-height:1}
+.af-s-lbl{font-size:15px;font-weight:700;color:var(--mut);margin-top:10px}
+.af-arrow{align-self:center;font-size:30px;font-weight:900;color:var(--brand2)}
+.af-step-win{border-color:rgba(16,185,129,.5);background:linear-gradient(160deg,rgba(16,185,129,.16),rgba(16,185,129,.03))}
+.af-step-win .af-s-val{color:var(--emerald)}
+
+.af-roi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.af-roi-item{border:1px solid var(--stroke);border-radius:var(--radius);padding:32px 28px;
+  background:linear-gradient(160deg,var(--panel2),var(--panel));box-shadow:var(--shadow)}
+.af-roi-val{font-size:clamp(50px,5.4vw,84px);font-weight:900;letter-spacing:-.04em;line-height:1;margin:14px 0 10px}
+.af-green{color:var(--emerald)}
+
+.af-commit{border:1px solid var(--stroke2);border-radius:var(--radius);padding:40px 44px;
+  background:linear-gradient(160deg,rgba(167,139,250,.12),rgba(167,139,250,.02));box-shadow:var(--shadow)}
+.af-c-head{font-size:15px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);margin-bottom:16px}
+.af-commit p{font-size:clamp(20px,2.2vw,28px);line-height:1.6;font-weight:600;max-width:1100px}
+.af-commit b{color:#fff;font-weight:800}
+
+@media(max-width:1080px){.af-grid4{grid-template-columns:repeat(2,1fr)}.af-days{grid-template-columns:repeat(4,1fr)}.af-roi{grid-template-columns:1fr}}
+@media(max-width:640px){.af-grid4{grid-template-columns:1fr}.af-days{grid-template-columns:repeat(2,1fr)}.af-hero{padding:30px 24px}.af-commit{padding:28px 24px}}
