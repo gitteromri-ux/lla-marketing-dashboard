@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie Masterclass — Ad Set Command Board · 3 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#02061A;--bg2:#040B26;--txt:#F4F7FF;--mut:#9AA8C7;--mut2:#6B7AA0;--brand:#006EFF;--brand2:#3D8BFF;--ice:#7FD3FF;--cyan:#06B6D4;--emerald:#10B981;--amber:#F59E0B;--rose:#FB7185;--stroke:rgba(255,255,255,.09);--stroke2:rgba(127,211,255,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
+ radial-gradient(900px 600px at 12% -10%,rgba(0,110,255,.38),transparent 60%),
+ radial-gradient(800px 600px at 95% 10%,rgba(127,211,255,.22),transparent 60%),
+ radial-gradient(1000px 700px at 50% 110%,rgba(6,182,212,.22),transparent 60%)}
+body:after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(127,211,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(127,211,255,.07) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%)}
+.slide{position:relative;z-index:1;min-height:100vh;scroll-snap-align:start;padding:56px 64px 72px;display:flex;flex-direction:column;gap:28px}
+.slide+.slide{border-top:1px solid transparent;background:linear-gradient(90deg,transparent,rgba(127,211,255,.5),transparent) top/100% 1px no-repeat}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:18px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ice)}
+.eyebrow .n{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--ice);box-shadow:0 0 24px rgba(127,211,255,.7),inset 0 0 14px rgba(127,211,255,.35);font-size:20px;letter-spacing:0}
+.pulse{width:14px;height:14px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 0 rgba(127,211,255,.8);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(127,211,255,.8)}100%{box-shadow:0 0 0 18px rgba(127,211,255,0)}}
+h1{font-size:clamp(44px,6.2vw,104px);line-height:.98;letter-spacing:-.035em;font-weight:900}
+h1 .glow{color:#fff;text-shadow:0 0 18px rgba(127,211,255,.9),0 0 60px rgba(0,110,255,.75)}
+h1 .ice{color:var(--ice);text-shadow:0 0 30px rgba(127,211,255,.85)}
+.sub{font-size:clamp(20px,1.9vw,30px);color:var(--mut);font-weight:500;max-width:1100px;line-height:1.35}
+.meta{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:18px;color:var(--mut2);font-weight:600}
+.meta b{color:var(--txt)}
+/* glass */
+.glass{position:relative;border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--stroke);box-shadow:0 30px 90px -30px rgba(0,0,0,.85),0 1px 0 rgba(255,255,255,.08) inset;backdrop-filter:blur(14px)}
+.glass.hot{border-color:var(--stroke2);box-shadow:0 0 0 1px rgba(127,211,255,.25),0 0 70px -10px rgba(0,110,255,.6),0 30px 90px -30px rgba(0,0,0,.9)}
+/* slide 1 : six set cards */
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;flex:1}
+.set{padding:26px 28px 24px;display:flex;flex-direction:column;gap:14px;overflow:hidden}
+.set:before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(127,211,255,.6),transparent 40%,transparent 70%,rgba(0,110,255,.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.set .id{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.set .id .num{font-size:64px;font-weight:900;letter-spacing:-.05em;line-height:1;color:#fff;text-shadow:0 0 28px rgba(127,211,255,.8)}
+.set .id .name{font-size:14px;color:var(--mut2);font-family:ui-monospace,Menlo,monospace;text-align:right;line-height:1.35}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1px solid}
+.b-live{color:var(--emerald);border-color:rgba(16,185,129,.5);background:rgba(16,185,129,.12);box-shadow:0 0 22px rgba(16,185,129,.35)}
+.b-paused{color:var(--amber);border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.1)}
+.b-ret{color:var(--ice);border-color:rgba(127,211,255,.5);background:rgba(127,211,255,.1)}
+.set .role{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.set .role small{display:block;font-size:17px;color:var(--mut);font-weight:500;margin-top:4px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-top:auto}
+.kv div{padding:12px 14px;border-radius:16px;background:rgba(2,6,26,.55);border:1px solid var(--stroke)}
+.kv .l{font-size:12.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--mut2);font-weight:700}
+.kv .v{font-size:26px;font-weight:800;letter-spacing:-.02em;margin-top:2px;font-variant-numeric:tabular-nums}
+.kv .v.sm{font-size:19px;line-height:1.2}
+.kv .v.ice{color:var(--ice)}
+/* slide 2 : config table */
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden}
+th{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--ice);font-weight:800;text-align:left;padding:18px 18px;border-bottom:1px solid var(--stroke2);background:rgba(127,211,255,.06)}
+td{padding:18px;font-size:22px;font-weight:600;border-bottom:1px solid var(--stroke);vertical-align:middle;line-height:1.25}
+tr:last-child td{border-bottom:0}
+td.setc{font-size:40px;font-weight:900;letter-spacing:-.04em;color:#fff;text-shadow:0 0 22px rgba(127,211,255,.7);white-space:nowrap}
+td.setc small{display:block;font-size:13px;color:var(--mut2);font-family:ui-monospace,Menlo,monospace;letter-spacing:0;text-shadow:none;font-weight:500;margin-top:4px}
+td .big{font-size:34px;font-weight:900;letter-spacing:-.03em;color:var(--ice);font-variant-numeric:tabular-nums}
+td .mut{color:var(--mut);font-size:17px;font-weight:500;display:block}
+.pill{display:inline-block;padding:6px 12px;border-radius:10px;font-size:16px;font-weight:800;letter-spacing:.04em;margin:2px 4px 2px 0;border:1px solid}
+.p-on{color:#fff;background:rgba(0,110,255,.35);border-color:rgba(61,139,255,.7);box-shadow:0 0 16px rgba(0,110,255,.45)}
+.p-off{color:var(--mut2);background:rgba(255,255,255,.03);border-color:var(--stroke);text-decoration:line-through}
+.p-and{color:var(--amber);border-color:rgba(245,158,11,.5);background:rgba(245,158,11,.08);font-size:13px;padding:4px 8px;vertical-align:middle}
+.legend{display:flex;flex-wrap:wrap;gap:14px 30px;font-size:17px;color:var(--mut)}
+.legend b{color:var(--txt)}
+/* slide 3 : ads per set */
+.adsets{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;flex:1}
+.adrow{padding:22px 24px;display:flex;flex-direction:column;gap:14px}
+.adrow .hd{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.adrow .hd .num{font-size:46px;font-weight:900;letter-spacing:-.04em;text-shadow:0 0 22px rgba(127,211,255,.7)}
+.adrow .hd .who{font-size:20px;color:var(--mut);font-weight:600}
+.phones{display:flex;gap:16px;flex-wrap:wrap}
+.phone{position:relative;width:148px;flex:0 0 auto}
+.phone .scr{position:relative;border-radius:22px;padding:7px;background:linear-gradient(160deg,#1a2340,#070c1f);border:1px solid rgba(255,255,255,.14);box-shadow:0 22px 40px -18px rgba(0,0,0,.9),0 0 0 1px rgba(127,211,255,.12),0 0 34px -8px rgba(0,110,255,.55)}
+.phone .scr img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px}
+.phone .scr:after{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:44px;height:6px;border-radius:6px;background:rgba(255,255,255,.18)}
+.phone .cap{margin-top:9px;font-size:14px;font-weight:700;line-height:1.25}
+.phone .cap small{display:block;color:var(--mut2);font-weight:500;font-size:12px;margin-top:2px}
+.phone.dim .scr{filter:saturate(.35) brightness(.7)}
+.phone.dim .cap{color:var(--mut)}
+.tag{position:absolute;top:-8px;right:-6px;z-index:2;padding:4px 9px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.t-live{background:var(--emerald);color:#02110b;box-shadow:0 0 16px rgba(16,185,129,.8)}
+.t-paused{background:#2a2f44;color:var(--amber);border:1px solid rgba(245,158,11,.5)}
+.t-new{background:var(--ice);color:#021b2e;box-shadow:0 0 16px rgba(127,211,255,.9)}
+.foot{font-size:15px;color:var(--mut2);display:flex;gap:28px;flex-wrap:wrap}
+@media (max-width:1100px){.slide{padding:40px 24px 56px}.grid6{grid-template-columns:1fr}.adsets{grid-template-columns:1fr}table{display:block;overflow-x:auto}td{font-size:18px}.set .id .num{font-size:52px}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ───────── SLIDE 1 : CAMPAIGN AT A GLANCE ───────── -->
+<section class="slide" id="s1">
+  <div class="eyebrow"><span class="pulse"></span> Julie Masterclass · Meta · Ad Set Command Board · <span class="n">1</span></div>
+  <h1><span class="glow">6 ad sets.</span> <span class="ice">3 live.</span> <span class="glow">One audience that buys.</span></h1>
+  <p class="sub">Every ad set in the masterclass campaign (ID 52668266203628), as configured on Meta right now. Live and paused, including the three sets that received new UGC ads tonight.</p>
+  <div class="meta"><span>Account <b>act_1459085242361281</b></span><span>Pixel <b>1440305917310328</b></span><span>Offer <b>$49 · $79 VIP</b></span><span>Snapshot <b>Sat 3 Oct 2026 · 01:50 IDT</b></span><span>Source <b>Meta Marketing API, read-back</b></span></div>
+
+  <div class="grid6">
+    <article class="glass hot set">
+      <div class="id"><div class="num">01</div><div class="name">ecomm_Adset_01_All_All_CPM_#108813<br>52668330533628</div></div>
+      <span class="badge b-live">● Live · $279 / day</span>
+      <div class="role">Intent prospecting<small>All 6 sales since 24 Sep came from this set</small></div>
+      <div class="kv">
+        <div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Shoppers or Income 25%</div></div>
+        <div><div class="l">Size</div><div class="v ice">38–45M</div></div>
+        <div><div class="l">Ages</div><div class="v">45–64 hard</div></div>
+        <div><div class="l">Advantage+</div><div class="v">OFF</div></div>
+      </div>
+    </article>
+
+    <article class="glass set">
+      <div class="id"><div class="num">02</div><div class="name">ecomm_Adset_02_All_All_CPM_#108814<br>52668268711228</div></div>
+      <span class="badge b-ret">◎ Live · Retargeting + Lookalikes · $45 / day</span>
+      <div class="role">Warm pool + 3 lookalikes<small>11 retargeting lists + 3 × 1% US lookalikes added 00:38</small></div>
+      <div class="kv">
+        <div><div class="l">Audience</div><div class="v sm">Visitors · carts · checkouts · leads · video viewers · LAL 1% × 3</div></div>
+        <div><div class="l">Size</div><div class="v ice">25k → 2.3M+</div></div>
+        <div><div class="l">Ages</div><div class="v">35–64</div></div>
+        <div><div class="l">Interests</div><div class="v">None</div></div>
+      </div>
+    </article>
+
+    <article class="glass set">
+      <div class="id"><div class="num">03</div><div class="name">ecomm_Adset_03_All_All_CPM_#108815<br>52668330165828</div></div>
+      <span class="badge b-live">● Live · $199 / day</span>
+      <div class="role">Wide intent<small>Was broad until 2 Oct 18:25; interests added by Omri</small></div>
+      <div class="kv">
+        <div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Engaged Shoppers</div></div>
+        <div><div class="l">Size</div><div class="v ice">76–89M</div></div>
+        <div><div class="l">Ages</div><div class="v">35–65+</div></div>
+        <div><div class="l">Income</div><div class="v">None</div></div>
+      </div>
+    </article>
+
+    <article class="glass set">
+      <div class="id"><div class="num">04</div><div class="name">ecomm_Adset_04_All_All_CPM_#108816<br>52668330870828</div></div>
+      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
+      <div class="role">UGC + proven set<small>5 ads loaded tonight, all paused · targeting still September default</small></div>
+      <div class="kv">
+        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
+        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
+        <div><div class="l">Ages</div><div class="v">35–64</div></div>
+        <div><div class="l">Geo</div><div class="v sm">34 US states</div></div>
+      </div>
+    </article>
+
+    <article class="glass set">
+      <div class="id"><div class="num">05</div><div class="name">ecomm_Adset_05_All_All_CPM_#108817<br>52668330871228</div></div>
+      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
+      <div class="role">Empty<small>No ads · same September default targeting as 04</small></div>
+      <div class="kv">
+        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
+        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
+        <div><div class="l">Ages</div><div class="v">35–64</div></div>
+        <div><div class="l">Ads</div><div class="v">0</div></div>
+      </div>
+    </article>
+
+    <article class="glass set">
+      <div class="id"><div class="num">06</div><div class="name">ecomm_Adset6_0_All_All_CPM_#108818<br>52668330871028</div></div>
+      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
+      <div class="role">UGC + banners<small>4 ads loaded tonight, all paused · targeting still September default</small></div>
+      <div class="kv">
+        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
+        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
+        <div><div class="l">Ages</div><div class="v">35–64</div></div>
+        <div><div class="l">Geo</div><div class="v sm">34 US states</div></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────── SLIDE 2 : CONFIGURATION CHART ───────── -->
+<section class="slide" id="s2">
+  <div class="eyebrow"><span class="pulse"></span> Targeting configuration · every ad set · <span class="n">2</span></div>
+  <h1><span class="glow">Who each set</span> <span class="ice">is allowed to reach.</span></h1>
+  <div class="legend"><span><b>AND</b> = person must match both groups</span><span><b>OR</b> = any one is enough</span><span><b>Hard</b> = Advantage+ audience off, Meta cannot widen</span><span>Sizes = Meta reach estimate, US, 3 Oct 01:50 IDT</span></div>
+
+  <div class="glass" style="overflow:hidden">
+  <table>
+    <thead><tr><th>Set</th><th>Status · budget</th><th>Type</th><th>Ages</th><th>Advantage+</th><th>Interests</th><th>Buyer signals</th><th>Custom audiences</th><th>Size</th><th>Placements</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="setc">01<small>#108813</small></td>
+        <td><span class="badge b-live">Live</span><span class="mut">$279 / day</span></td>
+        <td>Intent prospecting</td>
+        <td><span class="big">45–64</span><span class="mut">hard</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="pill p-on">41 interests</span><span class="pill p-and">AND</span></td>
+        <td><span class="pill p-on">Engaged Shoppers</span> or <span class="pill p-on">Income top 10%</span> <span class="pill p-on">top 10–25%</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="big">38.1–44.8M</span></td>
+        <td>FB feed + Reels overlay<span class="mut">mobile + desktop</span></td>
+      </tr>
+      <tr>
+        <td class="setc">02<small>#108814</small></td>
+        <td><span class="badge b-ret">Live</span><span class="mut">$45 / day</span></td>
+        <td>Retargeting + lookalikes</td>
+        <td><span class="big">35–64</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="mut">None</span></td>
+        <td>11 lists: visitors 30/90 d · checkout 30/90 d · ATC 30/90 d · form openers · leads 30/90 d · video viewers ×2<br><span class="pill p-on">+ LAL 1% checkout starters</span><span class="pill p-on">+ LAL 1% masterclass viewers</span><span class="pill p-on">+ LAL 1% video 75%</span></td>
+        <td><span class="big">23k</span><span class="mut">→ 2.3M+ when lookalikes finish building</span></td>
+        <td>Automatic</td>
+      </tr>
+      <tr>
+        <td class="setc">03<small>#108815</small></td>
+        <td><span class="badge b-live">Live</span><span class="mut">$199 / day</span></td>
+        <td>Wide intent</td>
+        <td><span class="big">35–65+</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="pill p-on">41 interests</span><span class="pill p-and">AND</span></td>
+        <td><span class="pill p-on">Engaged Shoppers</span><span class="mut">no income tier</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="big">76.0–89.4M</span></td>
+        <td>FB feed + Reels overlay</td>
+      </tr>
+      <tr>
+        <td class="setc">04<small>#108816</small></td>
+        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
+        <td>September default</td>
+        <td><span class="big">35–64</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
+        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="big">78.6–92.5M</span></td>
+        <td>Automatic · 34 US states</td>
+      </tr>
+      <tr>
+        <td class="setc">05<small>#108817</small></td>
+        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
+        <td>September default · empty</td>
+        <td><span class="big">35–64</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
+        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="big">78.6–92.5M</span></td>
+        <td>Automatic · 34 US states</td>
+      </tr>
+      <tr>
+        <td class="setc">06<small>#108818</small></td>
+        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
+        <td>September default</td>
+        <td><span class="big">35–64</span></td>
+        <td><span class="pill p-off">A+ off</span></td>
+        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
+        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
+        <td><span class="mut">None</span></td>
+        <td><span class="big">78.6–92.5M</span></td>
+        <td>Automatic · 34 US states</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="foot"><span>41 interests = 8 original health/longevity + 14 Tier-1 education & self-development buyers + 19 Tier-2 supplements & training.</span><span>Last significant edits: 01 → 1 Oct 18:32 · 02 → 3 Oct 00:38 · 03 → 2 Oct 18:25.</span></div>
+</section>
+
+<!-- ───────── SLIDE 3 : ADS PER AD SET ───────── -->
+<section class="slide" id="s3">
+  <div class="eyebrow"><span class="pulse"></span> Ads inside each ad set · live, paused, new tonight · <span class="n">3</span></div>
+  <h1><span class="glow">What is actually</span> <span class="ice">running where.</span></h1>
+  <div class="legend"><span><span class="tag t-live" style="position:static">Live</span> delivering now</span><span><span class="tag t-new" style="position:static">New</span> uploaded 2 Oct night, paused</span><span><span class="tag t-paused" style="position:static">Paused</span> in the set, not delivering</span></div>
+
+  <div class="adsets">
+    <article class="glass hot adrow">
+      <div class="hd"><span class="num">01</span><span class="who">Intent · 4 live · 10 paused</span></div>
+      <div class="phones">
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold banner"></div><div class="cap">card-gold<small>Static · sold 2 Oct 05:00</small></div></div>
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold banner"></div><div class="cap">zoom-gold<small>Static</small></div></div>
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad12-set01.jpg" alt="Ad#12 video thumbnail"></div><div class="cap">Ad#12 · 65 s<small>Video · new thumbnail B</small></div></div>
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad11-set01.jpg" alt="Ad#11 video thumbnail"></div><div class="cap">Ad#11 · 90 s<small>Video · new thumbnail B</small></div></div>
+      </div>
+      <div class="foot"><span>Paused: 7B · 7C · EVENT-ZOOM · original7c · card-blue · zoom-blue · video11 · video12 · Ad#3 Courtney · Ad#6 static</span></div>
+    </article>
+
+    <article class="glass adrow">
+      <div class="hd"><span class="num">02</span><span class="who">Retargeting + LAL · 3 live · 8 paused</span></div>
+      <div class="phones">
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/card-blue.jpg" alt="card-blue banner"></div><div class="cap">card-blue<small>Static</small></div></div>
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/zoom-blue.jpg" alt="zoom-blue banner"></div><div class="cap">zoom-blue<small>Static</small></div></div>
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/black.jpg" alt="Ad#11 original black first-frame thumbnail"></div><div class="cap">Ad#11 · 90 s<small>Video · original black thumbnail</small></div></div>
+      </div>
+      <div class="foot"><span>Paused: card-gold · zoom-gold · Ad#12 · video11 · video12 · original7c · Ad#3 Courtney · Ad#6 static</span></div>
+    </article>
+
+    <article class="glass adrow">
+      <div class="hd"><span class="num">03</span><span class="who">Wide intent · 1 live · 3 paused</span></div>
+      <div class="phones">
+        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad12-set03.jpg" alt="Ad#12 standard video"></div><div class="cap">Ad#12 · 65 s<small>Standard video · sold 2 Oct 18:00</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits · 14 years" · final</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years" · final</small></div></div>
+      </div>
+      <div class="foot"><span>Paused: Ad#12 original copy (29 Sep)</span></div>
+    </article>
+
+    <article class="glass adrow">
+      <div class="hd"><span class="num">04</span><span class="who">Not configured · 0 live · 5 loaded</span></div>
+      <div class="phones">
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits"</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years"</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad12-set03.jpg" alt="Ad#12 video"></div><div class="cap">Ad#12 · 65 s<small>Video</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold"></div><div class="cap">card-gold<small>Static</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold"></div><div class="cap">zoom-gold<small>Static</small></div></div>
+      </div>
+      <div class="foot"><span>Set is paused; targeting must be set before activation.</span></div>
+    </article>
+
+    <article class="glass adrow">
+      <div class="hd"><span class="num">05</span><span class="who">Not configured · empty</span></div>
+      <div class="foot" style="font-size:22px;color:var(--mut)"><span>No ads in this set.</span></div>
+    </article>
+
+    <article class="glass adrow">
+      <div class="hd"><span class="num">06</span><span class="who">Not configured · 0 live · 4 loaded</span></div>
+      <div class="phones">
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits"</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years"</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold"></div><div class="cap">card-gold<small>Static</small></div></div>
+        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold"></div><div class="cap">zoom-gold<small>Static</small></div></div>
+      </div>
+      <div class="foot"><span>Set is paused; targeting must be set before activation.</span></div>
+    </article>
+  </div>
+  <div class="foot"><span>UGC files in Meta = Ad 1 final ("33 years", 75 s) and Ad 3 final ("5 habits", 68.7 s). Previous-version Ad 2 / Ad 4 files are in the media library only, attached to no ad.</span><span>Mockups show the 1:1 placement asset of each ad.</span></div>
+</section>
+
+</body>
+</html>
