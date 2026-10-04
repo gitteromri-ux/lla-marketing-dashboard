@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Julie Masterclass — Ad Set Command Board · 3 Oct 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Julie Masterclass — CEO Daily Update · Sun 4 Oct 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#02061A;--bg2:#040B26;--txt:#F4F7FF;--mut:#9AA8C7;--mut2:#6B7AA0;--brand:#006EFF;--brand2:#3D8BFF;--ice:#7FD3FF;--cyan:#06B6D4;--emerald:#10B981;--amber:#F59E0B;--rose:#FB7185;--stroke:rgba(255,255,255,.09);--stroke2:rgba(127,211,255,.35)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -87,248 +82,135 @@ td .mut{color:var(--mut);font-size:22px;font-weight:500;display:block}
 .foot{font-size:22px;color:var(--mut2);display:flex;gap:28px;flex-wrap:wrap}
 @media (max-width:1100px){.slide{padding:40px 24px 56px}.grid6{grid-template-columns:1fr}.adsets{grid-template-columns:1fr}table{display:block;overflow-x:auto}td{font-size:18px}.set .id .num{font-size:52px}}
 @media (prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}}
-</style>
-</head>
-<body>
 
-<!-- ───────── SLIDE 1 : CAMPAIGN AT A GLANCE ───────── -->
+.hero h1{font-size:clamp(52px,6.4vw,112px)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kpi{padding:26px 28px} .kpi .l{font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut2);font-weight:800}
+.kpi .v{font-size:clamp(56px,5vw,92px);font-weight:900;letter-spacing:-.04em;line-height:1.05;color:#fff;text-shadow:0 0 26px rgba(127,211,255,.7)}
+.kpi .s{font-size:24px;color:var(--mut);font-weight:600}
+.kpi .v.g{color:var(--emerald);text-shadow:0 0 26px rgba(16,185,129,.6)}
+.chg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.chg article{padding:26px 30px} .chg h3{font-size:clamp(30px,2.6vw,44px);font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.chg h3 em{font-style:normal;color:var(--ice)} .chg p{font-size:26px;color:var(--mut);margin-top:10px;line-height:1.35;font-weight:500} .chg p b{color:var(--txt)}
+.chg .n{font-size:22px;font-weight:900;color:var(--amber);letter-spacing:.2em}
+.ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.ladder div{padding:16px;border-radius:18px;border:1px solid var(--stroke);background:rgba(2,6,26,.55);font-size:22px;font-weight:700;line-height:1.25}
+.ladder div b{display:block;font-size:44px;font-weight:900;color:#fff}
+.ratio{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ratio article{padding:30px} .ratio .v{font-size:clamp(70px,7vw,130px);font-weight:900;letter-spacing:-.05em;line-height:1;color:var(--ice);text-shadow:0 0 30px rgba(127,211,255,.8)}
+.ratio .l{font-size:24px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut2);font-weight:800}
+.ratio p{font-size:28px;color:var(--mut);font-weight:600;margin-top:8px} .ratio p b{color:var(--txt)}
+td.sc{font-size:40px;font-weight:900;color:#fff;white-space:nowrap} td.sc small{display:block;font-size:17px;color:var(--mut2);font-weight:600}
+td.hi{color:var(--ice);font-weight:800} td.win{color:var(--emerald);font-weight:900;font-size:34px}
+tr.tot td{background:rgba(127,211,255,.07);font-weight:900}
+.tabs{display:flex;gap:12px;flex-wrap:wrap}
+.tab{font:inherit;cursor:pointer;padding:14px 22px;border-radius:18px;border:1px solid var(--stroke);background:rgba(255,255,255,.04);color:var(--mut);font-size:24px;font-weight:800;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:44px}
+.tab b{font-size:18px;color:var(--emerald);letter-spacing:.06em;text-transform:uppercase}
+.tab.on{color:#fff;border-color:var(--stroke2);background:rgba(0,110,255,.28);box-shadow:0 0 28px rgba(0,110,255,.5)}
+.pane{display:none} .pane.on{display:block}
+.daygrid{display:grid;grid-template-columns:420px 1fr;gap:20px}
+.dlog{padding:24px} .dlog .l{font-size:20px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice);font-weight:800;margin-bottom:12px}
+.dlog li{font-size:24px;line-height:1.35;margin:0 0 14px 22px;font-weight:600}
+.tw{padding:6px;overflow-x:auto} .tw td{font-size:24px}
+.mock{display:flex;gap:22px;flex-wrap:wrap}
+.fb{width:360px;border-radius:30px;padding:10px;background:linear-gradient(160deg,#1a2340,#070c1f);border:1px solid rgba(255,255,255,.14);box-shadow:0 0 34px -8px rgba(0,110,255,.55)}
+.fb .in{background:#fff;color:#050505;border-radius:22px;overflow:hidden}
+.fb .gh{padding:12px 14px 6px;font-size:15px;font-weight:800;color:#050505} .fb .gh small{display:block;color:#65676b;font-weight:500;font-size:13px}
+.fb .tx{padding:4px 14px 10px;font-size:15px;line-height:1.35} .fb .tx a{color:#0064d1}
+.fb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.fb .st{padding:10px 14px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.st.live{color:#0a7d4f} .st.pend{color:#b26b00}
+.note{font-size:22px;color:var(--mut2)}
+@media (max-width:1100px){.kpis,.chg,.ratio{grid-template-columns:1fr 1fr}.ladder{grid-template-columns:1fr 1fr}.daygrid{grid-template-columns:1fr}td.sc{font-size:26px}}
+@media (max-width:640px){.kpis,.chg,.ratio{grid-template-columns:1fr}.tw td,td{font-size:16px}.fb{width:100%}}
+</style></head><body>
+
+<section class="slide hero" id="s0">
+ <div class="eyebrow"><span class="pulse"></span> CEO daily update · Julie masterclass · Sun 4 Oct 2026</div>
+ <h1><span class="glow">CPM down 81%.</span> <span class="ice">5 sales in 3 days.</span> <span class="glow">UGC already selling.</span></h1>
+ <p class="sub">This week we rebuilt the campaign around one rule: reach only people who both care about longevity and buy online. Six ad sets now cover the full intent range, from warm visitors to top-10% income households.</p>
+ <div class="kpis">
+  <div class="glass kpi hot"><div class="l">Sales · 7 days</div><div class="v g">7</div><div class="s">5 of them in the last 3 days</div></div>
+  <div class="glass kpi"><div class="l">CPM · last 3 days</div><div class="v">$67</div><div class="s">was $352 on 28–30 Sep</div></div>
+  <div class="glass kpi"><div class="l">LP visits · 7 days</div><div class="v">505</div><div class="s">332 in the last 3 days</div></div>
+  <div class="glass kpi"><div class="l">Ad sets live</div><div class="v">6 / 6</div><div class="s">$1,284 / day total budget</div></div>
+ </div>
+</section>
+
 <section class="slide" id="s1">
-  <div class="eyebrow"><span class="pulse"></span> Julie Masterclass · Meta · Ad Set Command Board · <span class="n">1</span></div>
-  <h1><span class="glow">6 ad sets.</span> <span class="ice">3 live.</span> <span class="glow">One audience that buys.</span></h1>
-  <p class="sub">Every ad set in the masterclass campaign (ID 52668266203628), as configured on Meta right now. Live and paused, including the three sets that received new UGC ads tonight.</p>
-  <div class="meta"><span>Account <b>act_1459085242361281</b></span><span>Pixel <b>1440305917310328</b></span><span>Offer <b>$49 · $79 VIP</b></span><span>Snapshot <b>Sat 3 Oct 2026 · 01:50 IDT</b></span><span>Source <b>Meta Marketing API, read-back</b></span></div>
-
-  <div class="grid6">
-    <article class="glass hot set">
-      <div class="id"><div class="num">01</div><div class="name">ecomm_Adset_01_All_All_CPM_#108813<br>52668330533628</div></div>
-      <span class="badge b-live">● Live · $279 / day</span>
-      <div class="role">Intent prospecting<small>All 6 sales since 24 Sep came from this set</small></div>
-      <div class="kv">
-        <div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Shoppers or Income 25%</div></div>
-        <div><div class="l">Size</div><div class="v ice">38–45M</div></div>
-        <div><div class="l">Ages</div><div class="v">45–64 hard</div></div>
-        <div><div class="l">Advantage+</div><div class="v">OFF</div></div>
-      </div>
-    </article>
-
-    <article class="glass set">
-      <div class="id"><div class="num">02</div><div class="name">ecomm_Adset_02_All_All_CPM_#108814<br>52668268711228</div></div>
-      <span class="badge b-ret">◎ Live · Retargeting + Lookalikes · $45 / day</span>
-      <div class="role">Warm pool + 3 lookalikes<small>11 retargeting lists + 3 × 1% US lookalikes added 00:38</small></div>
-      <div class="kv">
-        <div><div class="l">Audience</div><div class="v sm">Visitors · carts · checkouts · leads · video viewers · LAL 1% × 3</div></div>
-        <div><div class="l">Size</div><div class="v ice">25k → 2.3M+</div></div>
-        <div><div class="l">Ages</div><div class="v">35–64</div></div>
-        <div><div class="l">Interests</div><div class="v">None</div></div>
-      </div>
-    </article>
-
-    <article class="glass set">
-      <div class="id"><div class="num">03</div><div class="name">ecomm_Adset_03_All_All_CPM_#108815<br>52668330165828</div></div>
-      <span class="badge b-live">● Live · $199 / day</span>
-      <div class="role">Wide intent<small>Was broad until 2 Oct 18:25; interests added by Omri</small></div>
-      <div class="kv">
-        <div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Engaged Shoppers</div></div>
-        <div><div class="l">Size</div><div class="v ice">76–89M</div></div>
-        <div><div class="l">Ages</div><div class="v">35–65+</div></div>
-        <div><div class="l">Income</div><div class="v">None</div></div>
-      </div>
-    </article>
-
-    <article class="glass set">
-      <div class="id"><div class="num">04</div><div class="name">ecomm_Adset_04_All_All_CPM_#108816<br>52668330870828</div></div>
-      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
-      <div class="role">UGC + proven set<small>5 ads loaded tonight, all paused · targeting still September default</small></div>
-      <div class="kv">
-        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
-        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
-        <div><div class="l">Ages</div><div class="v">35–64</div></div>
-        <div><div class="l">Geo</div><div class="v sm">34 US states</div></div>
-      </div>
-    </article>
-
-    <article class="glass set">
-      <div class="id"><div class="num">05</div><div class="name">ecomm_Adset_05_All_All_CPM_#108817<br>52668330871228</div></div>
-      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
-      <div class="role">Empty<small>No ads · same September default targeting as 04</small></div>
-      <div class="kv">
-        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
-        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
-        <div><div class="l">Ages</div><div class="v">35–64</div></div>
-        <div><div class="l">Ads</div><div class="v">0</div></div>
-      </div>
-    </article>
-
-    <article class="glass set">
-      <div class="id"><div class="num">06</div><div class="name">ecomm_Adset6_0_All_All_CPM_#108818<br>52668330871028</div></div>
-      <span class="badge b-paused">◌ Paused · $10 · not configured</span>
-      <div class="role">UGC + banners<small>4 ads loaded tonight, all paused · targeting still September default</small></div>
-      <div class="kv">
-        <div><div class="l">Audience (old)</div><div class="v sm">11 interests <b>OR</b> income top 5% / 10%</div></div>
-        <div><div class="l">Size</div><div class="v ice">79–93M</div></div>
-        <div><div class="l">Ages</div><div class="v">35–64</div></div>
-        <div><div class="l">Geo</div><div class="v sm">34 US states</div></div>
-      </div>
-    </article>
-  </div>
+ <div class="eyebrow"><span class="n">1</span> What we changed this week · and why</div>
+ <div class="chg">
+  <article class="glass hot"><div class="n">AUDIENCE</div><h3>From 11 interests to <em>41 interests AND a buyer filter</em></h3><p>Every prospecting set now needs <b>2 signals</b>: one of 41 interests (8 longevity/health, 14 education &amp; self-development buyers, 19 supplements &amp; training) <b>AND</b> Engaged Shoppers or top household income. Why: interest alone brought readers, the AND brings buyers.</p></article>
+  <article class="glass"><div class="n">COST</div><h3>CPM from <em>$352 to $67</em></h3><p>We added <b>Facebook Reels and Instagram feed</b> next to the feed and widened ages to <b>35–65+</b> in the wide sets. Cheaper, larger pools of the same qualified people. Saturday averaged <b>$25 CPM</b>.</p></article>
+  <article class="glass"><div class="n">CREATIVE</div><h3>4 UGC videos live, <em>2 sales on day one</em></h3><p>Two presenters, square + vertical. Set 04 sold twice on Saturday night through <b>Facebook Reels</b> (Ad#17, Ad#18). UGC is now our cheapest traffic: <b>136 LP visits</b> in 2 days.</p></article>
+  <article class="glass"><div class="n">STRUCTURE</div><h3>6 ad sets, <em>one clear job each</em></h3><p>Banners only in sets 01/02. Sets 03–06 test video. Set 02 retargets <b>11 warm lists + 3 buyer lookalikes</b>. Income set 05 targets <b>top-10% households only</b>. Advantage+ off, so Meta cannot drift outside the audience.</p></article>
+ </div>
 </section>
 
-<!-- ───────── SLIDE 2 : CONFIGURATION CHART ───────── -->
 <section class="slide" id="s2">
-  <div class="eyebrow"><span class="pulse"></span> Targeting configuration · every ad set · <span class="n">2</span></div>
-  <h1><span class="glow">Who each set</span> <span class="ice">is allowed to reach.</span></h1>
-  <div class="legend"><span><b>AND</b> = person must match both groups</span><span><b>OR</b> = any one is enough</span><span><b>Hard</b> = Advantage+ audience off, Meta cannot widen</span><span>Sizes = Meta reach estimate, US, 3 Oct 01:50 IDT</span></div>
-
-  <div class="glass" style="overflow:hidden">
-  <table>
-    <thead><tr><th>Set</th><th>Status · budget</th><th>Type</th><th>Ages</th><th>Advantage+</th><th>Interests</th><th>Buyer signals</th><th>Custom audiences</th><th>Size</th><th>Placements</th></tr></thead>
-    <tbody>
-      <tr>
-        <td class="setc">01<small>#108813</small></td>
-        <td><span class="badge b-live">Live</span><span class="mut">$279 / day</span></td>
-        <td>Intent prospecting</td>
-        <td><span class="big">45–64</span><span class="mut">hard</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="pill p-on">41 interests</span><span class="pill p-and">AND</span></td>
-        <td><span class="pill p-on">Engaged Shoppers</span> or <span class="pill p-on">Income top 10%</span> <span class="pill p-on">top 10–25%</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="big">38.1–44.8M</span></td>
-        <td>FB feed + Reels overlay<span class="mut">mobile + desktop</span></td>
-      </tr>
-      <tr>
-        <td class="setc">02<small>#108814</small></td>
-        <td><span class="badge b-ret">Live</span><span class="mut">$45 / day</span></td>
-        <td>Retargeting + lookalikes</td>
-        <td><span class="big">35–64</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="mut">None</span></td>
-        <td>11 lists: visitors 30/90 d · checkout 30/90 d · ATC 30/90 d · form openers · leads 30/90 d · video viewers ×2<br><span class="pill p-on">+ LAL 1% checkout starters</span><span class="pill p-on">+ LAL 1% masterclass viewers</span><span class="pill p-on">+ LAL 1% video 75%</span></td>
-        <td><span class="big">23k</span><span class="mut">→ 2.3M+ when lookalikes finish building</span></td>
-        <td>Automatic</td>
-      </tr>
-      <tr>
-        <td class="setc">03<small>#108815</small></td>
-        <td><span class="badge b-live">Live</span><span class="mut">$199 / day</span></td>
-        <td>Wide intent</td>
-        <td><span class="big">35–65+</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="pill p-on">41 interests</span><span class="pill p-and">AND</span></td>
-        <td><span class="pill p-on">Engaged Shoppers</span><span class="mut">no income tier</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="big">76.0–89.4M</span></td>
-        <td>FB feed + Reels overlay</td>
-      </tr>
-      <tr>
-        <td class="setc">04<small>#108816</small></td>
-        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
-        <td>September default</td>
-        <td><span class="big">35–64</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
-        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="big">78.6–92.5M</span></td>
-        <td>Automatic · 34 US states</td>
-      </tr>
-      <tr>
-        <td class="setc">05<small>#108817</small></td>
-        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
-        <td>September default · empty</td>
-        <td><span class="big">35–64</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
-        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="big">78.6–92.5M</span></td>
-        <td>Automatic · 34 US states</td>
-      </tr>
-      <tr>
-        <td class="setc">06<small>#108818</small></td>
-        <td><span class="badge b-paused">Paused</span><span class="mut">$10 · not configured</span></td>
-        <td>September default</td>
-        <td><span class="big">35–64</span></td>
-        <td><span class="pill p-off">A+ off</span></td>
-        <td><span class="pill p-on">11 interests</span> <b>OR</b></td>
-        <td><span class="pill p-on">Income top 5%</span><span class="pill p-on">top 10%</span></td>
-        <td><span class="mut">None</span></td>
-        <td><span class="big">78.6–92.5M</span></td>
-        <td>Automatic · 34 US states</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="foot"><span>41 interests = 8 original health/longevity + 14 Tier-1 education & self-development buyers + 19 Tier-2 supplements & training.</span><span>Last significant edits: 01 → 1 Oct 18:32 · 02 → 3 Oct 00:38 · 03 → 2 Oct 18:25.</span></div>
+ <div class="eyebrow"><span class="n">2</span> How ad sets 01–06 are built · the intent range</div>
+ <div class="grid6">
+  <article class="glass hot set"><div class="id"><div class="num">01</div><div class="name">#108813<br>$319 / day</div></div><span class="badge b-live">● Live · intent core</span><div class="role">Buyers 45–64<small>Julie 65s · man-v1 UGC · card-gold</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Shoppers or top-25% income</div></div><div><div class="l">Size</div><div class="v ice">38–45M</div></div><div><div class="l">Ages</div><div class="v">45–64</div></div><div><div class="l">3-day sales</div><div class="v">2</div></div></div></article>
+  <article class="glass set"><div class="id"><div class="num">02</div><div class="name">#108814<br>$70 / day</div></div><span class="badge b-ret">◎ Live · warm</span><div class="role">Retargeting + LAL<small>Julie 90s · man-v1 UGC · card-blue</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">11 warm lists <span class="pill p-and">OR</span> 3 × 1% buyer lookalikes</div></div><div><div class="l">Size</div><div class="v ice">→ 2.3M</div></div><div><div class="l">Ages</div><div class="v">35–64</div></div><div><div class="l">Interests</div><div class="v">None</div></div></div></article>
+  <article class="glass set"><div class="id"><div class="num">03</div><div class="name">#108815<br>$249 / day</div></div><span class="badge b-live">● Live · wide intent</span><div class="role">Shoppers 35–65+<small>Julie Ad#12 · 65s film</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Engaged Shoppers</div></div><div><div class="l">Size</div><div class="v ice">76–89M</div></div><div><div class="l">Ages</div><div class="v">35–65+</div></div><div><div class="l">3-day sales</div><div class="v">1</div></div></div></article>
+  <article class="glass hot set"><div class="id"><div class="num">04</div><div class="name">#108816<br>$199 / day</div></div><span class="badge b-live">● Live · UGC test</span><div class="role">4 UGC videos<small>Ad#15–18 · man 1/4 · woman 2/3</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Shoppers or top-25% income</div></div><div><div class="l">Size</div><div class="v ice">wide</div></div><div><div class="l">Ages</div><div class="v">35–65+</div></div><div><div class="l">3-day sales</div><div class="v">2</div></div></div></article>
+  <article class="glass set"><div class="id"><div class="num">05</div><div class="name">#108817<br>$188 / day</div></div><span class="badge b-live">● Live · income</span><div class="role">Top-10% income<small>Julie 65s · man-v1 UGC</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> top-10% income only</div></div><div><div class="l">Pool</div><div class="v ice">affluent</div></div><div><div class="l">Ages</div><div class="v">35–65+</div></div><div><div class="l">Creative</div><div class="v">Video</div></div></div></article>
+  <article class="glass set"><div class="id"><div class="num">06</div><div class="name">#108818<br>$259 / day</div></div><span class="badge b-live">● Live · video intent</span><div class="role">Buyers 45–64 · video<small>Julie 65s · man-v1 · woman-v3 UGC</small></div><div class="kv"><div><div class="l">Audience</div><div class="v sm">41 interests <span class="pill p-and">AND</span> Shoppers or top-25% income</div></div><div><div class="l">Day-1 CTR</div><div class="v ice">12.9%</div></div><div><div class="l">Ages</div><div class="v">45–64</div></div><div><div class="l">Creative</div><div class="v">Video</div></div></div></article>
+ </div>
+ <div class="ladder">
+  <div><b>02</b>Warm: already visited, carted or watched</div><div><b>05</b>Interest + top-10% income: can pay VIP</div><div><b>01</b>Interest + buyer/income, core age</div><div><b>06</b>Same pool as 01, video-only test</div><div><b>03</b>Interest + online shopper, all adult ages</div><div><b>04</b>Same wide buyers, UGC creative</div>
+ </div>
+ <p class="note">Why this is the right range: no set is pure-interest or broad. Every cold set requires purchase behaviour or income, so spend goes to people who buy online, while ages and creative vary to find where the next sales come from. Sizes are Meta US estimates; income = ZIP-level household-income tiers.</p>
 </section>
 
-<!-- ───────── SLIDE 3 : ADS PER AD SET ───────── -->
 <section class="slide" id="s3">
-  <div class="eyebrow"><span class="pulse"></span> Ads inside each ad set · live, paused, new tonight · <span class="n">3</span></div>
-  <h1><span class="glow">What is actually</span> <span class="ice">running where.</span></h1>
-  <div class="legend"><span><span class="tag t-live" style="position:static">Live</span> delivering now</span><span><span class="tag t-new" style="position:static">New</span> uploaded 2 Oct night, paused</span><span><span class="tag t-paused" style="position:static">Paused</span> in the set, not delivering</span></div>
-
-  <div class="adsets">
-    <article class="glass hot adrow">
-      <div class="hd"><span class="num">01</span><span class="who">Intent · 4 live · 10 paused</span></div>
-      <div class="phones">
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold banner"></div><div class="cap">card-gold<small>Static · sold 2 Oct 05:00</small></div></div>
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold banner"></div><div class="cap">zoom-gold<small>Static</small></div></div>
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad12-set01.jpg" alt="Ad#12 video thumbnail"></div><div class="cap">Ad#12 · 65 s<small>Video · new thumbnail B</small></div></div>
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad11-set01.jpg" alt="Ad#11 video thumbnail"></div><div class="cap">Ad#11 · 90 s<small>Video · new thumbnail B</small></div></div>
-      </div>
-      <div class="foot"><span>Paused: 7B · 7C · EVENT-ZOOM · original7c · card-blue · zoom-blue · video11 · video12 · Ad#3 Courtney · Ad#6 static</span></div>
-    </article>
-
-    <article class="glass adrow">
-      <div class="hd"><span class="num">02</span><span class="who">Retargeting + LAL · 3 live · 8 paused</span></div>
-      <div class="phones">
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/card-blue.jpg" alt="card-blue banner"></div><div class="cap">card-blue<small>Static</small></div></div>
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/zoom-blue.jpg" alt="zoom-blue banner"></div><div class="cap">zoom-blue<small>Static</small></div></div>
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/black.jpg" alt="Ad#11 original black first-frame thumbnail"></div><div class="cap">Ad#11 · 90 s<small>Video · original black thumbnail</small></div></div>
-      </div>
-      <div class="foot"><span>Paused: card-gold · zoom-gold · Ad#12 · video11 · video12 · original7c · Ad#3 Courtney · Ad#6 static</span></div>
-    </article>
-
-    <article class="glass adrow">
-      <div class="hd"><span class="num">03</span><span class="who">Wide intent · 1 live · 3 paused</span></div>
-      <div class="phones">
-        <div class="phone"><span class="tag t-live">Live</span><div class="scr"><img src="assets/ads/ad12-set03.jpg" alt="Ad#12 standard video"></div><div class="cap">Ad#12 · 65 s<small>Standard video · sold 2 Oct 18:00</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits · 14 years" · final</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years" · final</small></div></div>
-      </div>
-      <div class="foot"><span>Paused: Ad#12 original copy (29 Sep)</span></div>
-    </article>
-
-    <article class="glass adrow">
-      <div class="hd"><span class="num">04</span><span class="who">Not configured · 0 live · 5 loaded</span></div>
-      <div class="phones">
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits"</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years"</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad12-set03.jpg" alt="Ad#12 video"></div><div class="cap">Ad#12 · 65 s<small>Video</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold"></div><div class="cap">card-gold<small>Static</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold"></div><div class="cap">zoom-gold<small>Static</small></div></div>
-      </div>
-      <div class="foot"><span>Set is paused; targeting must be set before activation.</span></div>
-    </article>
-
-    <article class="glass adrow">
-      <div class="hd"><span class="num">05</span><span class="who">Not configured · empty</span></div>
-      <div class="foot" style="font-size:28px;color:var(--mut)"><span>No ads in this set.</span></div>
-    </article>
-
-    <article class="glass adrow">
-      <div class="hd"><span class="num">06</span><span class="who">Not configured · 0 live · 4 loaded</span></div>
-      <div class="phones">
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad13-ugc.jpg" alt="Ad#13 UGC"></div><div class="cap">Ad#13 UGC · 69 s<small>"5 habits"</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/ad14-ugc.jpg" alt="Ad#14 UGC"></div><div class="cap">Ad#14 UGC · 75 s<small>"33 years"</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/card-gold.jpg" alt="card-gold"></div><div class="cap">card-gold<small>Static</small></div></div>
-        <div class="phone dim"><span class="tag t-new">New</span><div class="scr"><img src="assets/ads/zoom-gold.jpg" alt="zoom-gold"></div><div class="cap">zoom-gold<small>Static</small></div></div>
-      </div>
-      <div class="foot"><span>Set is paused; targeting must be set before activation.</span></div>
-    </article>
-  </div>
-  <div class="foot"><span>UGC files in Meta = Ad 1 final ("33 years", 75 s) and Ad 3 final ("5 habits", 68.7 s). Previous-version Ad 2 / Ad 4 files are in the media library only, attached to no ad.</span><span>Mockups show the 1:1 placement asset of each ad.</span></div>
+ <div class="eyebrow"><span class="n">3</span> Where we are now · last 3 days (2–4 Oct)</div>
+ <div class="ratio">
+  <article class="glass hot"><div class="l">LP visits → Add to cart</div><div class="v">55 : 1</div><p><b>332 visits → 6 carts</b> (1.8%). This is the lever: every +15% here is a +15% in sales.</p></article>
+  <article class="glass"><div class="l">Add to cart → Sale</div><div class="v">1.2 : 1</div><p><b>6 carts → 5 sales</b> (83%). Checkout converts: people who start, buy.</p></article>
+ </div>
+ <div class="glass tw"><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$775</td><td>1,943</td><td>$399</td><td>40</td><td>2.06%</td><td class='hi'>38</td><td class='hi'>2</td><td>2</td><td class='win'>2</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$226</td><td>652</td><td>$346</td><td>13</td><td>1.99%</td><td class='hi'>12</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$587</td><td>10,341</td><td>$57</td><td>92</td><td>0.89%</td><td class='hi'>81</td><td class='hi'>2</td><td>1</td><td class='win'>1</td></tr><tr><td class='sc'>04<small>UGC test</small></td><td>$241</td><td>16,488</td><td>$15</td><td>154</td><td>0.93%</td><td class='hi'>136</td><td class='hi'>2</td><td>2</td><td class='win'>2</td></tr><tr><td class='sc'>05<small>Top-10% income</small></td><td>$189</td><td>3,580</td><td>$53</td><td>38</td><td>1.06%</td><td class='hi'>31</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>06<small>Intent · video only</small></td><td>$236</td><td>558</td><td>$424</td><td>35</td><td>6.27%</td><td class='hi'>34</td><td class='hi'>0</td><td>1</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$2,255</td><td>33,562</td><td>$67</td><td>372</td><td>1.11%</td><td class='hi'>332</td><td class='hi'>6</td><td>6</td><td class='win'>5</td></tr></table></div>
+ <p class="note">Meta Ads Manager, Israel time, 2–4 Oct 2026; 4 Oct is partial (to ~13:00).</p>
 </section>
 
-</body>
-</html>
+<section class="slide" id="s4">
+ <div class="eyebrow"><span class="n">4</span> Day by day · last 7 days</div>
+ <div class="tabs"><button class='tab' data-t='09-28'>Mon 28 Sep<b>1 sale</b></button><button class='tab' data-t='09-29'>Tue 29 Sep<b>1 sale</b></button><button class='tab' data-t='09-30'>Wed 30 Sep<b>0 sales</b></button><button class='tab' data-t='10-01'>Thu 1 Oct<b>0 sales</b></button><button class='tab' data-t='10-02'>Fri 2 Oct<b>2 sales</b></button><button class='tab' data-t='10-03'>Sat 3 Oct<b>2 sales</b></button><button class='tab on' data-t='10-04'>Sun 4 Oct<b>1 sale</b></button></div>
+ <div class='pane' id='p09-28'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Mon 28 Sep</div><ul><li>Baseline: sets 01 (intent) + 02 (retargeting) live on Facebook feed.</li><li>First $79 VIP order of the week from set 01.</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$461</td><td>1,446</td><td>$319</td><td>38</td><td>2.63%</td><td class='hi'>34</td><td class='hi'>1</td><td>1</td><td class='win'>1</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$130</td><td>536</td><td>$242</td><td>14</td><td>2.61%</td><td class='hi'>12</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$591</td><td>1,982</td><td>$298</td><td>52</td><td>2.62%</td><td class='hi'>46</td><td class='hi'>1</td><td>1</td><td class='win'>1</td></tr></table></div></div></div><div class='pane' id='p09-29'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Tue 29 Sep</div><ul><li>Set 03 launched as a wide test with Julie's 65-second film.</li><li>Second order from set 01.</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$284</td><td>611</td><td>$465</td><td>14</td><td>2.29%</td><td class='hi'>15</td><td class='hi'>2</td><td>2</td><td class='win'>1</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$120</td><td>326</td><td>$367</td><td>6</td><td>1.84%</td><td class='hi'>5</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$106</td><td>281</td><td>$376</td><td>5</td><td>1.78%</td><td class='hi'>4</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$509</td><td>1,218</td><td>$418</td><td>25</td><td>2.05%</td><td class='hi'>24</td><td class='hi'>2</td><td>2</td><td class='win'>1</td></tr></table></div></div></div><div class='pane' id='p09-30'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Wed 30 Sep</div><ul><li>Purchase tracking locked and verified end to end (browser + server).</li><li>Organic kit built: 115 Facebook groups, 6.42M members, per-group tracked links.</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$334</td><td>724</td><td>$461</td><td>15</td><td>2.07%</td><td class='hi'>13</td><td class='hi'>2</td><td>2</td><td class='win'>0</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$72</td><td>185</td><td>$389</td><td>4</td><td>2.16%</td><td class='hi'>4</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$271</td><td>933</td><td>$291</td><td>17</td><td>1.82%</td><td class='hi'>17</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$677</td><td>1,842</td><td>$367</td><td>36</td><td>1.95%</td><td class='hi'>34</td><td class='hi'>2</td><td>2</td><td class='win'>0</td></tr></table></div></div></div><div class='pane' id='p10-01'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Thu 1 Oct</div><ul><li>Set 01 rebuilt: 41 interests AND (Engaged Shoppers OR top-25% income), ages 45–64.</li><li>Facebook Reels added next to feed. Set 03 CPM drops from $291 to $90.</li><li>45 group posts submitted (4 live, 41 in admin review, ~8M members).</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$374</td><td>604</td><td>$619</td><td>18</td><td>2.98%</td><td class='hi'>17</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$47</td><td>86</td><td>$551</td><td>1</td><td>1.16%</td><td class='hi'>1</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$473</td><td>5,249</td><td>$90</td><td>63</td><td>1.20%</td><td class='hi'>51</td><td class='hi'>1</td><td>1</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$894</td><td>5,939</td><td>$150</td><td>82</td><td>1.38%</td><td class='hi'>69</td><td class='hi'>1</td><td>1</td><td class='win'>0</td></tr></table></div></div></div><div class='pane' id='p10-02'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Fri 2 Oct</div><ul><li>Set 03 narrowed from broad to 41 interests AND Engaged Shoppers (18:25).</li><li>2 orders: set 01 + set 03.</li><li>Four final UGC videos uploaded (2 presenters, square + vertical).</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$303</td><td>667</td><td>$454</td><td>14</td><td>2.10%</td><td class='hi'>14</td><td class='hi'>1</td><td>1</td><td class='win'>1</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$70</td><td>171</td><td>$410</td><td>4</td><td>2.34%</td><td class='hi'>3</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$276</td><td>3,812</td><td>$72</td><td>34</td><td>0.89%</td><td class='hi'>29</td><td class='hi'>1</td><td>1</td><td class='win'>1</td></tr><tr class='tot'><td class='sc'>Total</td><td>$648</td><td>4,650</td><td>$139</td><td>52</td><td>1.12%</td><td class='hi'>46</td><td class='hi'>2</td><td>2</td><td class='win'>2</td></tr></table></div></div></div><div class='pane' id='p10-03'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Sat 3 Oct</div><ul><li>Set 02 upgraded: 11 warm lists + 3 × 1% US lookalikes of buyers/viewers.</li><li>Sets 04 + 05 switched on with the 41-interest build. CPM hits $25 across the account.</li><li>UGC sells on day one: 2 orders from set 04 (Ad#17, Ad#18, Facebook Reels).</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$206</td><td>663</td><td>$310</td><td>7</td><td>1.06%</td><td class='hi'>7</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$59</td><td>259</td><td>$227</td><td>3</td><td>1.16%</td><td class='hi'>3</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$102</td><td>5,976</td><td>$17</td><td>40</td><td>0.67%</td><td class='hi'>35</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>04<small>UGC test</small></td><td>$124</td><td>15,932</td><td>$8</td><td>134</td><td>0.84%</td><td class='hi'>117</td><td class='hi'>2</td><td>2</td><td class='win'>2</td></tr><tr><td class='sc'>05<small>Top-10% income</small></td><td>$175</td><td>3,542</td><td>$49</td><td>36</td><td>1.02%</td><td class='hi'>30</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$665</td><td>26,372</td><td>$25</td><td>220</td><td>0.83%</td><td class='hi'>192</td><td class='hi'>2</td><td>2</td><td class='win'>2</td></tr></table></div></div></div><div class='pane on' id='p10-04'><div class='daygrid'><div class='glass dlog'><div class='l'>What we did · Sun 4 Oct</div><ul><li>Set 06 switched on (Julie 65s + 2 UGCs): 34 LP visits, 12.9% CTR on day one.</li><li>Order from set 01 at 05:00.</li><li>Banners kept only in sets 01/02, so sets 03–06 test video. Instagram feed added. Duplicate server signals removed so Meta learns from clean data.</li></ul></div><div class='glass tw'><table><tr><th>Ad set</th><th>Spend</th><th>Impr.</th><th>CPM</th><th>Clicks</th><th>CTR</th><th>LP visits</th><th>Add to cart</th><th>Checkout</th><th>Sales</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$266</td><td>613</td><td>$434</td><td>19</td><td>3.10%</td><td class='hi'>17</td><td class='hi'>1</td><td>1</td><td class='win'>1</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$97</td><td>222</td><td>$435</td><td>6</td><td>2.70%</td><td class='hi'>6</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$210</td><td>553</td><td>$380</td><td>18</td><td>3.25%</td><td class='hi'>17</td><td class='hi'>1</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>04<small>UGC test</small></td><td>$117</td><td>556</td><td>$211</td><td>20</td><td>3.60%</td><td class='hi'>19</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>05<small>Top-10% income</small></td><td>$14</td><td>38</td><td>$372</td><td>2</td><td>5.26%</td><td class='hi'>1</td><td class='hi'>0</td><td>0</td><td class='win'>0</td></tr><tr><td class='sc'>06<small>Intent · video only</small></td><td>$236</td><td>558</td><td>$424</td><td>35</td><td>6.27%</td><td class='hi'>34</td><td class='hi'>0</td><td>1</td><td class='win'>0</td></tr><tr class='tot'><td class='sc'>Total</td><td>$941</td><td>2,540</td><td>$370</td><td>100</td><td>3.94%</td><td class='hi'>94</td><td class='hi'>2</td><td>2</td><td class='win'>1</td></tr></table></div></div></div>
+</section>
+
+<section class="slide" id="s5">
+ <div class="eyebrow"><span class="n">5</span> The plan · from tomorrow</div>
+ <h1 style="font-size:clamp(44px,5vw,84px)"><span class="glow">5 today → 7 → 10 → 15 a day.</span> <span class="ice">371 sales by 31 Oct.</span></h1>
+ <p class="sub">Model: starts from the last-3-day baseline and improves every metric 15% every 3 days (cost per LP visit −15%, LP→cart +15%, cart→sale +15%, capped at 90%). Email blast to 3,000 past leads on Wed 7 Oct adds 3 sales over 7 days.</p>
+ <div class="glass tw"><table><tr><th>Period</th><th>Sales / day</th><th>From ads</th><th>From email</th><th>LP visits / day</th><th>LP→cart</th><th>Carts / day</th><th>Cart→sale</th><th>$ / LP visit</th><th>Ad budget / day</th></tr><tr><td class='sc' style='font-size:26px'>Today · Sun 4 Oct<small>1 booked by 13:00</small></td><td class='big'>5</td><td>5.0</td><td>0.0</td><td class='hi'>332</td><td>1.8%</td><td class='hi'>6.0</td><td>83%</td><td>$6.79</td><td class='big'>$2,255</td></tr><tr><td class='sc' style='font-size:26px'>Mon 5 – Wed 7 Oct<small>Email blast Wed</small></td><td class='big'>7</td><td>6.6</td><td>0.4</td><td class='hi'>351</td><td>2.1%</td><td class='hi'>7.3</td><td>90%</td><td>$5.77</td><td class='big'>$2,028</td></tr><tr><td class='sc' style='font-size:26px'>Thu 8 – Sat 10 Oct<small></small></td><td class='big'>10</td><td>9.6</td><td>0.4</td><td class='hi'>445</td><td>2.4%</td><td class='hi'>10.6</td><td>90%</td><td>$4.91</td><td class='big'>$2,183</td></tr><tr><td class='sc' style='font-size:26px'>Sun 11 – Tue 13 Oct<small></small></td><td class='big'>15</td><td>14.6</td><td>0.4</td><td class='hi'>589</td><td>2.7%</td><td class='hi'>16.2</td><td>90%</td><td>$4.17</td><td class='big'>$2,457</td></tr><tr><td class='sc' style='font-size:26px'>Wed 14 – Sat 31 Oct<small>hold rate to sign-up close</small></td><td class='big'>15</td><td>15.0</td><td>0.0</td><td class='hi'>527</td><td>3.2%</td><td class='hi'>16.7</td><td>90%</td><td>$3.54</td><td class='big'>$1,869</td></tr></table></div>
+</section>
+
+<section class="slide" id="s6">
+ <div class="eyebrow"><span class="n">6</span> What each ad set must deliver · per day</div>
+ <div class="glass tw"><table><tr><th>Set</th><th>Now</th><th>5–7 Oct · 7/day</th><th>8–10 Oct · 10/day</th><th>11–13 Oct · 15/day</th><th>Action</th></tr><tr><td class='sc'>01<small>Intent core</small></td><td>$319</td><td><span class='big'>$507</span><span class='mut'>88 LP · 1.6 sales</span></td><td><span class='big'>$546</span><span class='mut'>111 LP · 2.4 sales</span></td><td><span class='big'>$614</span><span class='mut'>147 LP · 3.6 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>Keep Julie 65s + man-v1 UGC + card-gold. Proven buyer pool: protect, scale budget in +20% steps.</td></tr><tr><td class='sc'>02<small>Retargeting + LAL</small></td><td>$70</td><td><span class='big'>$203</span><span class='mut'>35 LP · 0.7 sales</span></td><td><span class='big'>$218</span><span class='mut'>44 LP · 1.0 sales</span></td><td><span class='big'>$246</span><span class='mut'>59 LP · 1.5 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>Feeds on every LP visit we buy. Pool grows daily; add Ad#17/#18 UGC winners as social proof.</td></tr><tr><td class='sc'>03<small>Wide intent · Julie 65s</small></td><td>$249</td><td><span class='big'>$304</span><span class='mut'>53 LP · 1.0 sales</span></td><td><span class='big'>$327</span><span class='mut'>67 LP · 1.4 sales</span></td><td><span class='big'>$368</span><span class='mut'>88 LP · 2.2 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>Julie 65s only. Add the winning UGC (Ad#18) as a 2nd ad to lift LP→cart.</td></tr><tr><td class='sc'>04<small>UGC test</small></td><td>$199</td><td><span class='big'>$507</span><span class='mut'>88 LP · 1.6 sales</span></td><td><span class='big'>$546</span><span class='mut'>111 LP · 2.4 sales</span></td><td><span class='big'>$614</span><span class='mut'>147 LP · 3.6 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>All 4 UGCs. Ad#17 + #18 already sold on Reels: shift weight to them, refresh hooks every 3 days.</td></tr><tr><td class='sc'>05<small>Top-10% income</small></td><td>$188</td><td><span class='big'>$203</span><span class='mut'>35 LP · 0.7 sales</span></td><td><span class='big'>$218</span><span class='mut'>44 LP · 1.0 sales</span></td><td><span class='big'>$246</span><span class='mut'>59 LP · 1.5 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>Ability-to-pay pool. Julie 65s + man-v1 UGC; push VIP $79 angle.</td></tr><tr><td class='sc'>06<small>Intent · video only</small></td><td>$259</td><td><span class='big'>$304</span><span class='mut'>53 LP · 1.0 sales</span></td><td><span class='big'>$327</span><span class='mut'>67 LP · 1.4 sales</span></td><td><span class='big'>$368</span><span class='mut'>88 LP · 2.2 sales</span></td><td style='font-size:21px;font-weight:500;color:var(--mut);max-width:380px'>Day-1 CTR 12.9%. Let it exit learning; scale once first sale lands.</td></tr></table></div>
+ <div class="chg">
+  <article class="glass"><div class="n">BUDGET</div><h3>Raise in <em>+20% steps per day</em></h3><p>From $1,284 today toward the phase budgets above, so no set restarts learning. Winners get the next step first.</p></article>
+  <article class="glass"><div class="n">CREATIVE</div><h3><em>New UGC hook every 3 days</em></h3><p>Same presenters, new first 3 seconds, cut from the Ad#17/#18 winners. This is what delivers the +15% LP→cart.</p></article>
+  <article class="glass"><div class="n">LANDING PAGE</div><h3>Lift <em>LP → cart</em> from 1.8%</h3><p>Seat count + date urgency above the fold, VIP $79 framing, Julie proof clip. Checkout itself already converts 83%.</p></article>
+  <article class="glass"><div class="n">EMAIL · WED 7 OCT</div><h3><em>3,000 past leads</em> · 3 sales</h3><p>Blast + 2 reminders through ActiveCampaign, tracked link into the same CRM attribution. Openers feed set 02 retargeting.</p></article>
+ </div>
+</section>
+
+<section class="slide" id="s7">
+ <div class="eyebrow"><span class="n">7</span> Organic · Facebook groups</div>
+ <div class="kpis">
+  <div class="glass kpi hot"><div class="l">Group posts placed</div><div class="v">45</div><div class="s">+58 more groups (4.9M) queued</div></div>
+  <div class="glass kpi"><div class="l">Members reached</div><div class="v">~8–9M</div><div class="s">across 45 groups</div></div>
+  <div class="glass kpi"><div class="l">Live now</div><div class="v">4</div><div class="s">41 waiting on group admins</div></div>
+  <div class="glass kpi"><div class="l">Tracked clicks · checkouts</div><div class="v">0 · 0</div><div class="s">last counter read; per-group UTM links land in CRM</div></div>
+ </div>
+ <div class="mock">
+  <div class="fb"><div class="in"><div class="gh">Omri Gitter · Health, Fitness &amp; Weight Loss USA<small>102K members · Public</small></div><div class="tx">Julie Gibson Clark ages 8 months a year on ~$100/month. Her full protocol, live on Zoom, $49. Seats: <a>longevitylifeacademy.com/julie-masterclass</a></div><img src="assets/organic/julie-masterclass-feed-1080x1080.jpg" alt="Julie masterclass group post card"><div class="st live">● Live</div></div></div>
+  <div class="fb"><div class="in"><div class="gh">Omri Gitter · Strictly Over 60s Plus<small>Public group</small></div><div class="tx">Julie Gibson Clark ages 8 months a year on ~$100/month. Her full protocol, live on Zoom, $49. Seats: <a>longevitylifeacademy.com/julie-masterclass</a></div><img src="assets/organic/julie-masterclass-feed-1080x1080.jpg" alt="Julie masterclass group post card"><div class="st live">● Live</div></div></div>
+  <div class="fb"><div class="in"><div class="gh">Omri Gitter · Aging Gracefully<small>1.9M members · Public</small></div><div class="tx">Julie Gibson Clark ages 8 months a year on ~$100/month. Her full protocol, live on Zoom, $49. Seats: <a>longevitylifeacademy.com/julie-masterclass</a></div><img src="assets/organic/julie-masterclass-feed-1080x1080.jpg" alt="Julie masterclass group post card"><div class="st pend">◌ In admin review</div></div></div>
+ </div>
+ <p class="note">Live: Sinclair Fans · End Aging Now · Strictly Over 60s Plus · Health, Fitness &amp; Weight Loss USA (102K). Pending include Aging Gracefully groups (1.9M, 1.4M, 464K), Healthy Life 419K, Fit and Fabulous 214K, Healthy Living 453K, Medicinal Plants 333K. Organic is upside on top of the plan, not counted in the targets.</p>
+</section>
+<script>document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.pane').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('p'+b.dataset.t).classList.add('on')})</script>
+</body></html>
