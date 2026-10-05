@@ -1,157 +1,148 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Julie Masterclass · Creative system · 5 slides</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Julie Masterclass · Master deck · 7 slides</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#06070b;--fg:#f6f1e6;--mute:#9b957f;--gold:#d9b765;--blue:#7cc9ff;--line:rgba(255,255,255,.08)}
 *{box-sizing:border-box}body{margin:0;background:#000;overflow-x:hidden;font-family:Inter,system-ui,sans-serif;color:var(--fg)}
-.slide{width:1920px;height:1080px;position:relative;overflow:hidden;background:radial-gradient(1200px 700px at 70% 20%,#161a26 0%,var(--bg) 60%);padding:72px 96px;margin:0 auto 24px;page-break-after:always}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;background:radial-gradient(1200px 700px at 70% 20%,#161a26 0%,var(--bg) 60%);padding:60px 90px;margin:0 auto 24px}
 .slide:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 85% 90%,rgba(217,183,101,.14),transparent 70%);pointer-events:none}
-.kicker{font:600 20px/1 Inter;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
-h1{font:300 76px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 10px}h1 b{font-weight:600}
-.sub{font:400 24px/1.4 Inter;color:var(--mute);margin:0 0 44px;max-width:1300px}
-.row{display:flex;gap:40px;align-items:flex-end}
-.shot{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px var(--line);background:#000;position:relative}
-.shot img{display:block;width:100%;height:100%;object-fit:cover}
-.lab{position:absolute;left:16px;bottom:14px;font:600 15px/1 Inter;letter-spacing:.08em;background:rgba(0,0,0,.6);padding:8px 12px;border-radius:8px;color:#fff}
-.phone{width:324px;height:576px;border-radius:44px;padding:12px;background:#15161b;box-shadow:0 50px 90px rgba(0,0,0,.7),inset 0 0 0 2px #2a2c34;position:relative}
+.kicker{font:600 18px/1 Inter;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+h1{font:300 62px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 8px}h1 b{font-weight:600}
+.sub{font:400 21px/1.4 Inter;color:var(--mute);margin:0 0 30px;max-width:1500px}
+.row{display:flex;gap:36px;align-items:flex-end}
+.shot{border-radius:20px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px var(--line);background:#000;position:relative}
+.shot img{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+.phone{border-radius:44px;padding:12px;background:#15161b;box-shadow:0 50px 90px rgba(0,0,0,.7),inset 0 0 0 2px #2a2c34;position:relative}
 .phone .scr{width:100%;height:100%;border-radius:34px;overflow:hidden;background:#000;position:relative}
-.phone .scr img{width:100%;height:100%;object-fit:contain;display:block}
-.phone .notch{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:110px;height:30px;border-radius:20px;background:#000}
-.snd{position:absolute;right:24px;top:70px;background:rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:8px 12px;font:600 13px/1 Inter}
-.tag{display:inline-block;font:700 14px/1 Inter;letter-spacing:.1em;padding:8px 12px;border-radius:8px;margin-right:8px}
-.live{background:#153a22;color:#8ff0a4}.paused{background:#3a3115;color:#ead27a}
-.cap{margin-top:16px;font:500 20px/1.3 Inter;color:var(--fg)}.cap small{display:block;color:var(--mute);font-weight:400;font-size:17px;margin-top:4px}
-.foot{position:absolute;left:96px;right:96px;bottom:44px;display:flex;justify-content:space-between;font:400 16px/1 Inter;color:var(--mute);border-top:1px solid var(--line);padding-top:18px}
-.stat{font:300 54px/1 Fraunces,serif;color:var(--gold)}.stat small{display:block;font:400 18px/1.3 Inter;color:var(--mute);margin-top:8px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.phone .scr img,.phone .scr video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.notch{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:100px;height:28px;border-radius:20px;background:#000;z-index:2}
+.sbtn{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:9px 13px;font:600 13px/1 Inter;cursor:pointer;z-index:3}
+.tag{display:inline-block;font:700 13px/1 Inter;letter-spacing:.1em;padding:7px 11px;border-radius:8px;margin-right:6px}
+.live{background:#153a22;color:#8ff0a4}.paused{background:#3a3115;color:#ead27a}.sold{background:#3a1a1a;color:#ffb3a7}.res{background:#23262f;color:#b8bcc8}
+.cap{margin-top:14px;font:500 19px/1.3 Inter;color:var(--fg)}.cap small{display:block;color:var(--mute);font-weight:400;font-size:16px;margin-top:4px}
+.foot{position:absolute;left:90px;right:90px;bottom:36px;display:flex;justify-content:space-between;font:400 15px/1 Inter;color:var(--mute);border-top:1px solid var(--line);padding-top:16px}
+.topbar{position:absolute;right:90px;top:60px}
+.topbar button{background:var(--gold);color:#111;border:0;border-radius:999px;padding:14px 22px;font:700 16px/1 Inter;cursor:pointer}
+.mac{width:1500px;margin:0 auto;position:relative}
+.mac .bezel{background:#0d0e12;border-radius:26px;padding:18px 18px 46px;box-shadow:0 60px 120px rgba(0,0,0,.75),inset 0 0 0 2px #2a2c34}
+.mac .screen{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;position:relative}
+.mac video,.mac img{width:100%;height:100%;object-fit:cover;display:block}
+.mac .stand{width:260px;height:70px;margin:0 auto;background:linear-gradient(#1a1b21,#0b0c10);border-radius:0 0 18px 18px}
+.hook{font:600 20px/1.25 Fraunces,serif;color:var(--fg);margin-top:12px;text-align:center}
+.hook small{display:block;font:400 14px/1.3 Inter;color:var(--mute);margin-top:6px}
+.cuts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cut{position:relative;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 1px var(--line)}
+.cut video,.cut img{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+.cut .t{position:absolute;left:10px;top:8px;font:600 12px/1 Inter;letter-spacing:.08em;background:rgba(0,0,0,.6);padding:6px 8px;border-radius:6px}
+</style></head><body><div id="deck">
 
-.vphone{width:292px;height:502px;border-radius:40px;padding:11px;background:#15161b;box-shadow:0 50px 90px rgba(0,0,0,.7),inset 0 0 0 2px #2a2c34;position:relative}
-.vphone .scr{width:100%;height:100%;border-radius:30px;overflow:hidden;background:#000;position:relative}
-.vphone video,.vsq video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
-.vsq{width:300px;height:300px;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 1px var(--line);position:relative;background:#000}
-.sbtn{position:absolute;right:14px;bottom:14px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:9px 13px;font:600 13px/1 Inter;cursor:pointer}
-.ugc{display:flex;flex-direction:column;align-items:center;gap:18px}.pair{display:flex;gap:22px;align-items:flex-end}
-.topbar{position:absolute;right:96px;top:72px}
-.topbar button{background:var(--gold);color:#111;border:0;border-radius:999px;padding:14px 22px;font:700 17px/1 Inter;cursor:pointer}
-</style></head><body>
-<div id="deck">
-
-<!-- 1 -->
+<!-- 1 WEBSITE -->
 <section class="slide" id="s1">
  <p class="kicker">Longevity Life Academy · Julie Masterclass</p>
- <h1>The creative system: <b>4 banners, 3 Reels</b></h1>
- <p class="sub">Every banner in three sizes for feed and Reels. Three vertical videos set to the same Julie music track. Two colour worlds: gold card and blue card.</p>
- <div class="grid4" style="margin-top:8px">
-  <div><div class="shot" style="height:610px"><img src="../img/card-gold-1080x1350.jpg"><span class="lab">CARD-GOLD</span></div><div class="cap"><span class="tag live">LIVE · SET 01</span></div></div>
-  <div><div class="shot" style="height:610px"><img src="../img/card-blue-1080x1350.jpg"><span class="lab">CARD-BLUE</span></div><div class="cap"><span class="tag live">LIVE · SET 02</span></div></div>
-  <div><div class="shot" style="height:610px"><img src="../img/zoom-gold-1080x1350.jpg"><span class="lab">ZOOM-GOLD</span></div><div class="cap"><span class="tag paused">PAUSED 3 OCT</span></div></div>
-  <div><div class="shot" style="height:610px"><img src="../img/zoom-blue-1080x1350.jpg"><span class="lab">ZOOM-BLUE</span></div><div class="cap"><span class="tag paused">PAUSED 3 OCT</span></div></div>
- </div>
- <div class="foot"><span>Statics: v10 exports, 27 Sep · Reels: v2 builds, 3 Oct</span><span>Status as of 4 Oct 2026, 23:50 Israel</span></div>
+ <h1>The page every ad lands on: <b>longevitylifeacademy.com/julie-masterclass</b></h1>
+ <p class="sub">60-second screen recording: hero, every fold, Enroll now, VIP seat, enrol form, plan and date, $79 payment screen (recorded on staging, no order created).</p>
+ <div class="mac"><div class="bezel"><div class="screen"><video src="https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/8b140e20-1d59-4eb0-b380-acb92fe09d8b.mp4" poster="../frames/site.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn">Sound on</button></div></div><div class="stand"></div></div>
+ <div class="foot"><span>Offer: Masterclass $49 · VIP $79 · Oct 27 7 pm ET / Nov 14 1 pm ET</span><span>Slide 1 of 7</span></div>
 </section>
 
-<!-- 2 -->
+<!-- 2 CARD-GOLD -->
 <section class="slide" id="s2">
- <p class="kicker">Banner 1 of 2 live</p>
- <h1><b>card-gold</b> · square, 4:5, 9:16, and the Reels cut</h1>
- <p class="sub">Live in set 01 since 28 Sep. The Reels + music version went live 3 Oct 21:50 and sold within 8 hours on $71 of spend.</p>
- <div class="row">
-  <div><div class="shot" style="width:400px;height:400px"><img src="../img/card-gold-1080x1080.jpg"></div><div class="cap">1080×1080<small>Facebook & Instagram feed</small></div></div>
-  <div><div class="shot" style="width:400px;height:500px"><img src="../img/card-gold-1080x1350.jpg"></div><div class="cap">1080×1350<small>Feed 4:5</small></div></div>
-  <div><div class="shot" style="width:338px;height:600px"><img src="../img/card-gold-1080x1920.jpg"></div><div class="cap">1080×1920<small>Reels / Stories static</small></div></div>
-  <div class="phone"><div class="notch"></div><div class="scr"><img src="../img/card-gold-reels-frame.jpg"><span class="snd">♪ Sound on</span></div></div>
-  <div style="align-self:center;margin-left:8px"><div class="stat">$71<small>spend to first sale<br>Reels + music, set 01</small></div><div style="height:34px"></div><div class="stat">15 s<small>vertical video,<br>Julie music track</small></div></div>
+ <p class="kicker">Banner · live in set 01 (Reels + music) and set 03 / 04 from 5 Oct</p>
+ <h1><b>card-gold</b> · 1:1 · 4:5 · 9:16</h1>
+ <p class="sub">The Reels + music cut of this banner sold within 8 hours of going live on $71 of spend. Static version paused 5 Oct; video runs in sets 01, 03, 04.</p>
+ <div class="row" style="align-items:flex-end">
+  <div><div class="shot" style="width:720px;height:720px"><img src="../img/card-gold-1080x1080.jpg"></div><div class="cap">1080×1080 <small>feed square</small></div></div>
+  <div><div class="shot" style="width:576px;height:720px"><img src="../img/card-gold-1080x1350.jpg"></div><div class="cap">1080×1350 <small>feed 4:5</small></div></div>
+  <div><div class="shot" style="width:405px;height:720px"><img src="../img/card-gold-1080x1920.jpg"></div><div class="cap">1080×1920 <small>Reels / Stories</small></div></div>
  </div>
- <div class="foot"><span>card-gold · static + Reels video</span><span>Set 01 #108813</span></div>
+ <div class="foot"><span><span class="tag live">REELS + MUSIC LIVE · 01 · 03 · 04</span> <span class="tag sold">SOLD 4 OCT</span></span><span>Slide 2 of 7</span></div>
 </section>
 
-<!-- 3 -->
+<!-- 3 CARD-BLUE -->
 <section class="slide" id="s3">
- <p class="kicker">Banner 2 of 2 live</p>
- <h1><b>card-blue</b> · square, 4:5, 9:16, and the Reels cut</h1>
- <p class="sub">Live in set 02 (retargeting) since 28 Sep. Same build as gold, blue colour world, identical music track in the Reels version.</p>
- <div class="row">
-  <div><div class="shot" style="width:400px;height:400px"><img src="../img/card-blue-1080x1080.jpg"></div><div class="cap">1080×1080<small>Facebook & Instagram feed</small></div></div>
-  <div><div class="shot" style="width:400px;height:500px"><img src="../img/card-blue-1080x1350.jpg"></div><div class="cap">1080×1350<small>Feed 4:5</small></div></div>
-  <div><div class="shot" style="width:338px;height:600px"><img src="../img/card-blue-1080x1920.jpg"></div><div class="cap">1080×1920<small>Reels / Stories static</small></div></div>
-  <div class="phone"><div class="notch"></div><div class="scr"><img src="../img/card-blue-reels-frame.jpg"><span class="snd">♪ Sound on</span></div></div>
-  <div style="align-self:center;margin-left:8px"><div class="stat">Set 02<small>warm audience:<br>visitors, viewers, lookalikes</small></div><div style="height:34px"></div><div class="stat">15 s<small>vertical video,<br>Julie music track</small></div></div>
+ <p class="kicker">Banner · live in set 02 (retargeting), static + Reels + music</p>
+ <h1><b>card-blue</b> · 1:1 · 4:5 · 9:16</h1>
+ <p class="sub">Same build as gold in the blue colour world. Identical music track in its Reels cut.</p>
+ <div class="row" style="align-items:flex-end">
+  <div><div class="shot" style="width:720px;height:720px"><img src="../img/card-blue-1080x1080.jpg"></div><div class="cap">1080×1080 <small>feed square</small></div></div>
+  <div><div class="shot" style="width:576px;height:720px"><img src="../img/card-blue-1080x1350.jpg"></div><div class="cap">1080×1350 <small>feed 4:5</small></div></div>
+  <div><div class="shot" style="width:405px;height:720px"><img src="../img/card-blue-1080x1920.jpg"></div><div class="cap">1080×1920 <small>Reels / Stories</small></div></div>
  </div>
- <div class="foot"><span>card-blue · static + Reels video</span><span>Set 02 #108814</span></div>
+ <div class="foot"><span><span class="tag live">LIVE · SET 02</span></span><span>Slide 3 of 7</span></div>
 </section>
 
-<!-- 4 -->
+<!-- 4 ZOOM -->
 <section class="slide" id="s4">
- <p class="kicker">Reserve banners</p>
+ <p class="kicker">Reserve banners · paused 3 Oct</p>
  <h1><b>zoom-gold</b> and <b>zoom-blue</b> · live-Zoom framing</h1>
- <p class="sub">Paused 3 Oct when banners were cut to the best two. Full size set exists for both; zoom-blue also has a Reels + music cut ready.</p>
- <div class="row" style="gap:28px">
-  <div><div class="shot" style="width:330px;height:330px"><img src="../img/zoom-gold-1080x1080.jpg"></div><div class="cap">zoom-gold 1:1</div></div>
-  <div><div class="shot" style="width:330px;height:412px"><img src="../img/zoom-gold-1080x1350.jpg"></div><div class="cap">zoom-gold 4:5</div></div>
-  <div><div class="shot" style="width:280px;height:498px"><img src="../img/zoom-gold-1080x1920.jpg"></div><div class="cap">zoom-gold 9:16</div></div>
-  <div style="width:1px;height:520px;background:var(--line);margin:0 6px"></div>
-  <div><div class="shot" style="width:330px;height:330px"><img src="../img/zoom-blue-1080x1080.jpg"></div><div class="cap">zoom-blue 1:1</div></div>
-  <div><div class="shot" style="width:280px;height:498px"><img src="../img/zoom-blue-1080x1920.jpg"></div><div class="cap">zoom-blue 9:16</div></div>
+ <p class="sub">Full size sets exist for both; zoom-blue also has a Reels + music cut ready.</p>
+ <div class="row" style="align-items:flex-end;gap:30px">
+  <div><div class="shot" style="width:560px;height:700px"><img src="../img/zoom-gold-1080x1350.jpg"></div><div class="cap">zoom-gold 4:5</div></div>
+  <div><div class="shot" style="width:394px;height:700px"><img src="../img/zoom-gold-1080x1920.jpg"></div><div class="cap">zoom-gold 9:16</div></div>
+  <div style="width:1px;height:640px;background:var(--line)"></div>
+  <div><div class="shot" style="width:560px;height:700px"><img src="../img/zoom-blue-1080x1350.jpg"></div><div class="cap">zoom-blue 4:5</div></div>
+  <div><div class="shot" style="width:394px;height:700px"><img src="../img/zoom-blue-1080x1920.jpg"></div><div class="cap">zoom-blue 9:16</div></div>
  </div>
- <div class="foot"><span>zoom-gold · zoom-blue · static</span><span><span class="tag paused">PAUSED</span> ready to reactivate</span></div>
+ <div class="foot"><span><span class="tag paused">PAUSED · READY</span></span><span>Slide 4 of 7</span></div>
 </section>
 
-<!-- 5 -->
+<!-- 5 REELS MUSIC -->
 <section class="slide" id="s5">
- <p class="kicker">Reels with music</p>
+ <p class="kicker">Reels with music · 15 s · 9:16</p>
  <h1>Three vertical cuts, <b>one Julie track</b></h1>
- <p class="sub">15-second 9:16 videos built from the banners, autoplaying in Facebook Reels with sound. 3 of the last 4 masterclass sales came from Reels placements.</p>
- <div class="row" style="gap:70px;justify-content:center;align-items:center;margin-top:-10px">
-  <div style="text-align:center"><div class="phone"><div class="notch"></div><div class="scr"><img src="../img/card-gold-reels-frame.jpg"><span class="snd">♪ Sound on</span></div></div><div class="cap" style="margin-top:22px">card-gold Reels<small><span class="tag live">LIVE · SET 01</span> sold 4 Oct</small></div></div>
-  <div style="text-align:center"><div class="phone"><div class="notch"></div><div class="scr"><img src="../img/card-blue-reels-frame.jpg"><span class="snd">♪ Sound on</span></div></div><div class="cap" style="margin-top:22px">card-blue Reels<small><span class="tag live">LIVE · SET 02</span></small></div></div>
-  <div style="text-align:center"><div class="phone"><div class="notch"></div><div class="scr"><img src="../img/zoom-blue-reels-frame.jpg"><span class="snd">♪ Sound on</span></div></div><div class="cap" style="margin-top:22px">zoom-blue Reels<small><span class="tag paused">PAUSED</span> ready</small></div></div>
+ <p class="sub">Built from the banners, autoplaying in Facebook Reels with sound. 5 of the last 6 masterclass sales came from Reels placements.</p>
+ <div class="topbar"><button class="allsnd">Sound on · all videos on this slide</button></div>
+ <div class="row" style="gap:80px;justify-content:center;align-items:flex-start">
+  <div style="text-align:center"><div class="phone" style="width:400px;height:720px"><div class="notch"></div><div class="scr"><video src="../video/card-gold-reels.mp4" poster="../img/card-gold-reels-frame.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn">Sound on</button></div></div><div class="cap">card-gold Reels<small><span class="tag live">LIVE 01 · 03 · 04</span><span class="tag sold">SOLD</span></small></div></div>
+  <div style="text-align:center"><div class="phone" style="width:400px;height:720px"><div class="notch"></div><div class="scr"><video src="../video/card-blue-reels.mp4" poster="../img/card-blue-reels-frame.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn">Sound on</button></div></div><div class="cap">card-blue Reels<small><span class="tag live">LIVE 02</span></small></div></div>
+  <div style="text-align:center"><div class="phone" style="width:400px;height:720px"><div class="notch"></div><div class="scr"><video src="../video/zoom-blue-reels.mp4" poster="../img/zoom-blue-reels-frame.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn">Sound on</button></div></div><div class="cap">zoom-blue Reels<small><span class="tag paused">PAUSED · READY</span></small></div></div>
  </div>
- <div class="foot"><span>Playable versions with sound: lla-marketing-dashboard/julie-banners/</span><span>Identical audio track in all three (verified by file hash)</span></div>
+ <div class="foot"><span>Identical audio track in all three (verified by file hash)</span><span>Slide 5 of 7</span></div>
 </section>
 
+<!-- 6 UGC 8 -->
 <section class="slide" id="s6">
- <p class="kicker">UGC · the two men</p>
- <h1>Ad#15 and Ad#18 · <b>man, 81 s and 75 s</b></h1>
- <p class="sub">AI-presenter UGC videos, square for feed and vertical for Reels. Ad#18 sold in set 04 on its first night (Reels, 65+).</p>
+ <p class="kicker">UGC · 8 AI-presenter ads · 4 hooks × woman and man</p>
+ <h1>Eight UGC videos, <b>four power claims</b></h1>
+ <p class="sub">Each hook recorded by a woman and a man. Four are live on Meta; four are reserves. Ad#17 (Woman · Five habits) has sold three times on under $50 of spend.</p>
  <div class="topbar"><button class="allsnd">Sound on · all videos on this slide</button></div>
- <div class="row" style="gap:90px;justify-content:center;align-items:flex-start;margin-top:-20px">
-  <div class="ugc"><div class="pair">
-   <div class="vphone"><div class="notch"></div><div class="scr"><video src="../ugc/M1_916.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/M1-916-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="vsq"><video src="../ugc/M1_11.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/M1-11-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="cap" style="text-align:center">Ad#15 · Man · 33 years<small>LIVE sets 01, 02, 03, 04, 05, 06</small></div>
-  </div>
-  <div class="ugc"><div class="pair">
-   <div class="vphone"><div class="notch"></div><div class="scr"><video src="../ugc/M4_916.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/M4-916-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="vsq"><video src="../ugc/M4_11.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/M4-11-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="cap" style="text-align:center">Ad#18 · Man · Deadlier than<small>LIVE set 04 · sold 3 Oct</small></div>
-  </div>
- </div>
- <div class="foot"><span>UGC batch 03.10.26 · man versions 1 and 4</span><span>9:16 for Reels · 1:1 for feed · same cut, two crops</span></div>
+ <div class="row" id="ugcrow" style="gap:22px;justify-content:center;align-items:flex-start"></div>
+ <div class="foot"><span>Vertical 9:16 for Reels; each also exists in 1:1 for feed</span><span>Slide 6 of 7</span></div>
 </section>
+
+<!-- 7 FILM -->
 <section class="slide" id="s7">
- <p class="kicker">UGC · the two women</p>
- <h1>Ad#16 and Ad#17 · <b>woman, 69 s each</b></h1>
- <p class="sub">Ad#17 sold in set 04 on $23 of spend (Reels, 65+). Ad#16 is the DNA-age opener.</p>
+ <p class="kicker">Julie's film · masterclass edit · 12 cuts</p>
+ <h1>Full film, then <b>45 · 60 · 75 s</b> in 16:9 · 4:5 · 1:1 · 9:16</h1>
+ <p class="sub">The long edit on the left; every cutdown on the right, all autoplaying.</p>
  <div class="topbar"><button class="allsnd">Sound on · all videos on this slide</button></div>
- <div class="row" style="gap:90px;justify-content:center;align-items:flex-start;margin-top:-20px">
-  <div class="ugc"><div class="pair">
-   <div class="vphone"><div class="notch"></div><div class="scr"><video src="../ugc/W2_916.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/W2-916-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="vsq"><video src="../ugc/W2_11.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/W2-11-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="cap" style="text-align:center">Ad#16 · Woman · DNA 3 years<small>LIVE set 04</small></div>
-  </div>
-  <div class="ugc"><div class="pair">
-   <div class="vphone"><div class="notch"></div><div class="scr"><video src="../ugc/W3_916.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/W3-916-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="vsq"><video src="../ugc/W3_11.mp4" autoplay muted loop playsinline preload="metadata" poster="../img/W3-11-frame.jpg"></video><button class="sbtn">Sound on</button></div></div>
-   <div class="cap" style="text-align:center">Ad#17 · Woman · Five habits<small>LIVE sets 04, 05, 06 · sold 3 Oct</small></div>
-  </div>
+ <div style="display:flex;gap:34px;align-items:flex-start">
+  <div style="width:760px"><div class="cut" style="aspect-ratio:16/9"><video src="https://gitteromri-ux.github.io/lla-masterclass-assets/video/julie-masterclass-film-full-1080p-masterclass-edit.mp4" autoplay muted loop playsinline preload="metadata"></video><span class="t">FULL FILM · 1080p</span><button class="sbtn">Sound on</button></div><div class="cap">Masterclass edit <small>source for every cut</small></div></div>
+  <div style="flex:1" id="cuts"></div>
  </div>
- <div class="foot"><span>UGC batch 03.10.26 · woman versions 2 and 3</span><span>9:16 for Reels · 1:1 for feed · same cut, two crops</span></div>
+ <div class="foot"><span>gitteromri-ux.github.io/lla-masterclass-assets/julie-film-v4</span><span>Slide 7 of 7</span></div>
 </section>
-<script>
-document.querySelectorAll('.sbtn').forEach(b=>{b.onclick=()=>{const v=b.parentElement.querySelector('video');const on=v.muted;document.querySelectorAll('video').forEach(x=>{x.muted=true});document.querySelectorAll('.sbtn').forEach(x=>x.textContent='Sound on');v.muted=!on;if(!v.muted){v.currentTime=0;v.play().catch(()=>{});b.textContent='Sound off';}};});
-document.querySelectorAll('.allsnd').forEach(b=>{b.onclick=()=>{const vids=[...b.closest('.slide').querySelectorAll('video')];const on=vids[0].muted;document.querySelectorAll('video').forEach(x=>{x.muted=true});vids.forEach(v=>{v.muted=!on;if(!v.muted)v.play().catch(()=>{})});b.textContent=on?'Sound off · all videos on this slide':'Sound on · all videos on this slide';};});
-</script>
+
 </div>
 <script>
+const CDN='https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/';
+const UGC=[
+ ['W1','Woman','33 years apart','Her biological age vs her birthday','res','RESERVE'],
+ ['M1','Man','33 years apart','Ad#15 · paused 5 Oct, 0 carts','paused','AD#15 PAUSED'],
+ ['W2','Woman','DNA 3 years younger','Ad#16 · live set 04','live','AD#16 LIVE'],
+ ['M2','Man','DNA 3 years younger','reserve','res','RESERVE'],
+ ['W3','Woman','Five habits','Ad#17 · live 03 · 04 · 05 · 06 · 3 sales','sold','AD#17 · 3 SALES'],
+ ['M3','Man','Five habits','reserve','res','RESERVE'],
+ ['W4','Woman','Deadlier than smoking','reserve','res','RESERVE'],
+ ['M4','Man','Deadlier than smoking','Ad#18 · live set 04 · 1 sale','sold','AD#18 · 1 SALE']];
+const IDS={W1:'2b39fdef-5cc6-4a1f-a9b3-19e5ecea7ec3',W2:'80ae63fd-ec5b-4274-94df-b53dce0bea9b',W3:'1dd19ae4-5a35-4d50-846c-bb70dfd67988',W4:'94b93368-1c42-4344-b64e-39726bdf5c0c',M1:'07f31b55-9581-406d-acd2-3ad4c4a9b26b',M2:'ec5d8851-b78f-4c95-bd60-a252ea59bd41',M3:'8377076f-9510-4dbc-a233-1adf417a72c6',M4:'47970f8f-cdff-43e8-97db-ef5ddfccd1cd'};
+document.getElementById('ugcrow').innerHTML=UGC.map(u=>`<div style="width:196px;text-align:center"><div class="phone" style="width:196px;height:400px;padding:7px;border-radius:30px"><div class="notch" style="width:60px;height:16px;top:12px"></div><div class="scr" style="border-radius:24px"><video src="${CDN+IDS[u[0]]}.mp4" poster="../frames/${u[0]}.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn" style="padding:7px 10px;font-size:12px">Sound on</button></div></div><div class="hook">${u[1]} · “${u[2]}”<small><span class="tag ${u[4]}" style="font-size:11px;padding:5px 8px">${u[5]}</span></small></div></div>`).join('');
+const FB='https://gitteromri-ux.github.io/lla-masterclass-assets/julie-film-v4/';
+const LEN=['45','60','75'],AR=[['16x9','16:9'],['4x5','4:5'],['1x1','1:1'],['9x16','9:16']];
+document.getElementById('cuts').innerHTML=LEN.map(l=>`<div style="margin-bottom:12px"><div class="cuts">${AR.map(a=>`<div class="cut" style="height:180px"><video src="${FB}video/cuts/LLA_Julie_Masterclass_${l}s_${a[0]}.mp4" poster="${FB}thumbs/${l}s_${a[0]}.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="t">${a[1]} · ${l} s</span><button class="sbtn" style="padding:6px 9px;font-size:11px">Sound</button></div>`).join('')}</div></div>`).join('');
+function muteAll(){document.querySelectorAll('video').forEach(x=>{x.muted=true});document.querySelectorAll('.sbtn').forEach(x=>x.textContent=x.textContent.startsWith('Sound')?(x.textContent==='Sound'?'Sound':'Sound on'):x.textContent);document.querySelectorAll('.allsnd').forEach(b=>b.textContent='Sound on · all videos on this slide');}
+document.addEventListener('click',e=>{const b=e.target.closest('.sbtn');if(!b)return;const v=b.parentElement.querySelector('video');const on=v.muted;muteAll();if(on){v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.textContent='Sound off';}});
+document.querySelectorAll('.allsnd').forEach(b=>{b.onclick=()=>{const vids=[...b.closest('.slide').querySelectorAll('video')];const on=vids[0].muted;muteAll();if(on){vids.forEach(v=>{v.muted=false;v.play().catch(()=>{})});b.textContent='Sound off · all videos on this slide';}};});
 function fit(){const w=Math.min(window.innerWidth,1920);const s=w/1920;document.querySelectorAll(".slide").forEach(el=>{el.style.transform="scale("+s+")";el.style.transformOrigin="top left";el.style.marginBottom=(24*s-1080*(1-s))+"px";});document.getElementById("deck").style.width=w+"px";}
 window.addEventListener("resize",fit);fit();
 </script>
