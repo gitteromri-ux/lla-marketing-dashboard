@@ -28,7 +28,7 @@ h1{font:300 62px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 8px}h1 b{f
 .mac .screen{aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden;position:relative}
 .mac video,.mac img{width:100%;height:100%;object-fit:cover;display:block}
 .mac .stand{width:220px;height:40px;margin:0 auto;background:linear-gradient(#1a1b21,#0b0c10);border-radius:0 0 18px 18px}
-.hook{font:600 20px/1.25 Fraunces,serif;color:var(--fg);margin-top:12px;text-align:center}
+.hook{font:600 16px/1.3 Fraunces,serif;color:var(--fg);margin-top:12px;text-align:center;max-width:196px;margin-left:auto;margin-right:auto}
 .hook small{display:block;font:400 14px/1.3 Inter;color:var(--mute);margin-top:6px}
 .cuts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .cut{position:relative;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 20px 40px rgba(0,0,0,.5),0 0 0 1px var(--line)}
@@ -37,7 +37,7 @@ h1{font:300 62px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 8px}h1 b{f
 .dl{position:absolute;left:12px;bottom:12px;background:var(--gold);color:#111;border-radius:999px;padding:9px 13px;font:700 13px/1 Inter;text-decoration:none;z-index:3}
 .dl.sm{padding:6px 9px;font-size:11px;left:8px;bottom:8px}
 .vt{font:600 22px/1.2 Fraunces,serif;color:var(--fg);margin:0 0 10px;text-align:center}
-.hook{font:600 19px/1.2 Fraunces,serif}.hook small{font-size:13px}
+.hook{font:600 15px/1.3 Fraunces,serif}.hook small{font-size:13px}
 .cap{font-size:20px}
 </style></head><body><div id="deck">
 
@@ -109,7 +109,7 @@ h1{font:300 62px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 8px}h1 b{f
 <section class="slide" id="s6">
  <p class="kicker">UGC · 8 AI-presenter ads · 4 hooks × woman and man</p>
  <h1>Eight UGC videos, <b>four power claims</b></h1>
- <p class="sub">Each hook recorded by a woman and a man. Four are live on Meta; four are reserves. Ad#17 (Woman · Five habits) has sold three times on under $50 of spend.</p>
+ <p class="sub">Each hook is one full spoken sentence, recorded by a woman and a man. Two are live on Meta, two were tested and paused, four are reserves. Ad#17 (Woman · Five habits) has 11 sales on $3,530 since 28 Sep (Meta, 7 Oct 07:30 IL).</p>
  <div class="topbar"><button class="allsnd">Sound on · all videos on this slide</button></div>
  <div class="row" id="ugcrow" style="gap:22px;justify-content:center;align-items:flex-start"></div>
  <div class="foot"><span>Vertical 9:16 for Reels; each also exists in 1:1 for feed</span><span>Slide 6 of 7</span></div>
@@ -132,16 +132,16 @@ h1{font:300 62px/1.05 Fraunces,serif;letter-spacing:-.02em;margin:0 0 8px}h1 b{f
 <script>
 const CDN='https://d2ol7oe51mr4n9.cloudfront.net/user_3B2TkzjFQaqg6v69LxXPlh5VT9f/';
 const UGC=[
- ['W1','Woman','33 years apart','Her biological age vs her birthday','res','RESERVE'],
- ['M1','Man','33 years apart','Ad#15 · paused 5 Oct, 0 carts','paused','AD#15 PAUSED'],
- ['W2','Woman','DNA 3 years younger','Ad#16 · live set 04','live','AD#16 LIVE'],
- ['M2','Man','DNA 3 years younger','reserve','res','RESERVE'],
- ['W3','Woman','Five habits','Ad#17 · live 03 · 04 · 05 · 06 · 3 sales','sold','AD#17 · 3 SALES'],
- ['M3','Man','Five habits','reserve','res','RESERVE'],
- ['W4','Woman','Deadlier than smoking','reserve','res','RESERVE'],
- ['M4','Man','Deadlier than smoking','Ad#18 · live set 04 · 1 sale','sold','AD#18 · 1 SALE']];
+ ['W1','Woman','People born the same year can be 33 years apart in biological age.','reserve, not uploaded','res','RESERVE'],
+ ['M1','Man','People born the same year can be 33 years apart in biological age.','Ad#15 · paused 5 Oct · $147, 0 sales','paused','AD#15 PAUSED'],
+ ['W2','Woman','Eight weeks of lifestyle change made people\u2019s DNA test 3 years younger.','Ad#16 · paused · $43, 0 sales','paused','AD#16 PAUSED'],
+ ['M2','Man','Eight weeks of lifestyle change made people\u2019s DNA test 3 years younger.','reserve, not uploaded','res','RESERVE'],
+ ['W3','Woman','Five habits at age 50 add up to 14 years to your life.','Ad#17 · live in sets 03 \u00b7 04 \u00b7 05 \u00b7 $3,530, 11 sales','sold','AD#17 \u00b7 11 SALES'],
+ ['M3','Man','Five habits at age 50 add up to 14 years to your life.','reserve, not uploaded','res','RESERVE'],
+ ['W4','Woman','Not moving your body is 5 times deadlier than smoking.','reserve, not uploaded','res','RESERVE'],
+ ['M4','Man','Not moving your body is 5 times deadlier than smoking.','Ad#18 · live in set 04 · $1,209, 3 sales','sold','AD#18 \u00b7 3 SALES']];
 const IDS={W1:'2b39fdef-5cc6-4a1f-a9b3-19e5ecea7ec3',W2:'80ae63fd-ec5b-4274-94df-b53dce0bea9b',W3:'1dd19ae4-5a35-4d50-846c-bb70dfd67988',W4:'94b93368-1c42-4344-b64e-39726bdf5c0c',M1:'07f31b55-9581-406d-acd2-3ad4c4a9b26b',M2:'ec5d8851-b78f-4c95-bd60-a252ea59bd41',M3:'8377076f-9510-4dbc-a233-1adf417a72c6',M4:'47970f8f-cdff-43e8-97db-ef5ddfccd1cd'};
-document.getElementById('ugcrow').innerHTML=UGC.map(u=>`<div style="width:196px;text-align:center"><div class="phone" style="width:196px;height:400px;padding:7px;border-radius:30px"><div class="notch" style="width:60px;height:16px;top:12px"></div><div class="scr" style="border-radius:24px"><video src="${CDN+IDS[u[0]]}.mp4" poster="../frames/${u[0]}.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn" style="padding:7px 10px;font-size:12px">Sound on</button></div></div><div class="hook">UGC ${u[1]} · “${u[2]}”<small><span class="tag ${u[4]}" style="font-size:11px;padding:5px 8px">${u[5]}</span></small></div></div>`).join('');
+document.getElementById('ugcrow').innerHTML=UGC.map(u=>`<div style="width:196px;text-align:center"><div class="phone" style="width:196px;height:400px;padding:7px;border-radius:30px"><div class="notch" style="width:60px;height:16px;top:12px"></div><div class="scr" style="border-radius:24px"><video src="${CDN+IDS[u[0]]}.mp4" poster="../frames/${u[0]}.jpg" autoplay muted loop playsinline preload="metadata"></video><button class="sbtn" style="padding:7px 10px;font-size:12px">Sound on</button></div></div><div class="hook"><span style="display:block;font:500 12px/1.3 Inter;color:var(--mute);letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px">UGC ${u[1]}</span>“${u[2]}”<small style="margin-top:8px">${u[3]}</small><small><span class="tag ${u[4]}" style="font-size:11px;padding:5px 8px">${u[5]}</span></small></div></div>`).join('');
 const FB='https://gitteromri-ux.github.io/lla-masterclass-assets/julie-film-v4/';
 const LEN=['45','60','75'],AR=[['16x9','16:9'],['4x5','4:5'],['1x1','1:1'],['9x16','9:16']];
 document.getElementById('cuts').innerHTML=LEN.map(l=>`<div style="margin-bottom:12px"><div class="cuts">${AR.map(a=>`<div class="cut" style="height:200px"><video src="${FB}video/cuts/LLA_Julie_Masterclass_${l}s_${a[0]}.mp4" poster="${FB}thumbs/${l}s_${a[0]}.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="t">JULIE FILM · ${l} s · ${a[1]}</span><button class="sbtn" style="padding:6px 9px;font-size:11px">Sound</button></div>`).join('')}</div></div>`).join('');
