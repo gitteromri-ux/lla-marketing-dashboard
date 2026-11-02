@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masterclass November 14th</title>
+<style>
+:root{--bg:#07080c;--fg:#f4efe4;--mute:#c1bcaf;--gold:#d8b461;--blue:#79c8ff;--card:#11131a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 Inter,-apple-system,Segoe UI,sans-serif}
+header,section,footer,nav{max-width:1280px;margin:auto;padding:20px}
+nav{display:flex;gap:28px;flex-wrap:wrap;border-bottom:1px solid #333}
+nav a{color:var(--mute);text-decoration:none;padding:8px 0}
+nav a[aria-current]{color:var(--fg);border-bottom:2px solid var(--gold)}
+h1{font-size:clamp(32px,5vw,56px);line-height:1.1;margin:16px 0}h2{font-size:28px;margin:0 0 16px}
+p{margin:12px 0;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+figure{margin:0;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px #0007}
+figure img,figure video{display:block;width:100%;height:auto;background:#000}
+figcaption{padding:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:16px}
+a{color:var(--blue)}video{aspect-ratio:9/16}
+@media(max-width:650px){.grid{grid-template-columns:1fr}nav{gap:16px}header,section{padding:18px}}
+</style>
+</head>
+<body>
+<nav aria-label="Masterclass asset tabs">
+<a href="../slides/slides.html">Original master deck</a>
+<a href="./" aria-current="page">Masterclass November 14th</a>
+</nav>
+<header><h1>Masterclass November 14th</h1>
+<p>November 14 · 1 pm eastern. All 12 static banners and three banner Reels.</p>
+</header>
+<section><h2>Reels with the original music</h2><div class="grid" id="reels"></div></section>
+<main id="statics"></main>
+<footer>UGCs and Julie’s film remain unchanged in the original master deck.</footer>
+<script>
+const concepts=['card-gold','card-blue','zoom-gold','zoom-blue'];
+document.getElementById('reels').innerHTML=['card-gold','card-blue','zoom-blue'].map(c=>`<figure><video src="video/${c}-reels.mp4" poster="posters/${c}-reels.png" autoplay muted loop playsinline controls preload="metadata"></video><figcaption><span>${c} · 15 seconds</span><a href="video/${c}-reels.mp4" download>Download MP4</a></figcaption></figure>`).join('');
+document.getElementById('statics').innerHTML=concepts.map(c=>`<section><h2>${c}</h2><div class="grid">${[1080,1350,1920].map(h=>`<figure><a href="img/${c}-1080x${h}.png" target="_blank"><img src="img/${c}-1080x${h}.png" alt="${c}, November 14 at 1 pm eastern, 1080 by ${h}" loading="lazy"></a><figcaption><span>1080 × ${h}</span><a href="img/${c}-1080x${h}.png" download>Download PNG</a></figcaption></figure>`).join('')}</div></section>`).join('');
+document.querySelectorAll('video').forEach(v=>v.addEventListener('volumechange',()=>{if(!v.muted)document.querySelectorAll('video').forEach(o=>{if(o!==v)o.muted=true})}));
+</script>
+</body></html>
